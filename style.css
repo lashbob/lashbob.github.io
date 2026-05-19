@@ -1,0 +1,2254 @@
+/* Optimierte ausgelagerte Styles aus der ursprünglichen HTML-Datei */
+
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#071932;--blue:#153b73;--red:#c8102e;--gold:#d7a93b;--paper:#f4efe5;--photo-bg:#401320;
+  --slot-w:clamp(98px,7.4vw,155px);--slot-h:calc(var(--slot-w) * 1.37);--gap:clamp(9px,.9vw,16px);
+}
+body{font-family:Arial, Helvetica, sans-serif;background:radial-gradient(circle at top,#16325b 0,#071932 52%,#041022 100%);min-height:100vh;display:flex;flex-direction:column;align-items:stretch;padding:clamp(8px,1.1vw,18px)}
+button,input,select,textarea{font-family:Arial, Helvetica, sans-serif}button{font-family:Arial, Helvetica, sans-serif}.app-shell{width:80vw;max-width:1800px;min-width:0;margin:0 auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}.brand{display:flex;align-items:center;gap:13px}.brand-title{color:var(--gold);font-size:clamp(20px,2.2vw,34px);font-weight:900;letter-spacing:2px;text-transform:uppercase}.brand-sub{color:rgba(255,255,255,.48);font-size:clamp(10px,.8vw,13px);letter-spacing:1.6px;text-transform:uppercase;margin-top:3px}.global-add{width:58px;height:58px;border-radius:50%;background:var(--red);border:3px solid var(--gold);color:white;font-size:30px;font-weight:bold;cursor:pointer;box-shadow:0 6px 22px rgba(200,16,46,.42);transition:transform .18s}.global-add:hover{transform:scale(1.1) rotate(90deg)}
+.album{width:100%;display:flex;background:#6b5a3e;border-radius:12px;overflow:hidden;box-shadow:0 26px 76px rgba(0,0,0,.58),0 0 0 2px rgba(215,169,59,.28)}.album-spine-left{width:26px;background:linear-gradient(to right,#3b2b18,#745f3d);flex-shrink:0}.album-gutter{width:12px;background:linear-gradient(to right,rgba(0,0,0,.22),rgba(255,255,255,.13),rgba(0,0,0,.23));flex-shrink:0}.page{flex:1 1 0;min-width:0;min-height:clamp(780px,82vh,1120px);padding:clamp(14px,1.6vw,26px);background:linear-gradient(155deg,#fbf7ef,#eee5d6);position:relative;overflow:hidden}.page-left{box-shadow:inset -7px 0 20px rgba(0,0,0,.1)}.page-right{box-shadow:inset 7px 0 20px rgba(0,0,0,.1)}.page:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(255,255,255,.72),transparent 28%),linear-gradient(90deg,rgba(21,59,115,.05),transparent);pointer-events:none}.page-inner{position:relative;z-index:1;height:100%;display:flex;flex-direction:column}.page-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:14px}.club-head{display:flex;align-items:center;gap:12px}.club-name{color:var(--blue);font-size:clamp(18px,1.65vw,28px);font-weight:900;letter-spacing:2px;line-height:1.06;text-transform:uppercase}.club-pill{display:inline-block;background:var(--blue);color:white;font-size:10px;letter-spacing:1.1px;padding:4px 9px;border-radius:3px;margin-top:6px}.spread-tools{display:flex;align-items:center;gap:8px}.soft-btn{background:rgba(21,59,115,.08);border:1px solid rgba(21,59,115,.22);color:var(--blue);border-radius:999px;padding:7px 10px;font-size:11px;font-weight:bold;cursor:pointer;display:flex;align-items:center;gap:5px}.soft-btn:hover{background:rgba(21,59,115,.15)}.danger-soft{color:var(--red);border-color:rgba(200,16,46,.25);background:rgba(200,16,46,.06)}
+.category{margin-bottom:clamp(12px,1.5vw,19px)}.category-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;padding:8px 10px;background:linear-gradient(90deg,var(--blue),#0e274b);color:#fff;border-left:5px solid var(--gold);border-radius:4px;box-shadow:0 3px 8px rgba(0,0,0,.12)}.category-title{font-size:clamp(13px,1vw,17px);font-weight:900;letter-spacing:1.3px;text-transform:uppercase}.category-meta{font-size:10px;color:rgba(255,255,255,.68);letter-spacing:.8px}.cat-actions{display:flex;gap:6px}.cat-btn{width:27px;height:27px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}.cat-btn:hover{background:rgba(215,169,59,.85);color:#071932}.sticker-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--slot-w),var(--slot-w)));gap:var(--gap);align-items:start}.slot{width:var(--slot-w);height:var(--slot-h);position:relative}.slot-teal{background:transparent;border-radius:12px;padding:0;display:flex;align-items:center;justify-content:center}.slot-empty{border:2px dashed rgba(21,59,115,.32);border-radius:6px;background:rgba(21,59,115,.045);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:rgba(21,59,115,.37);transition:all .18s;cursor:pointer}.slot-empty:hover{border-color:rgba(215,169,59,.82);background:rgba(215,169,59,.11);color:rgba(21,59,115,.65)}.slot-no{font-size:clamp(8px,.7vw,11px);font-family:monospace;opacity:.68}.slot-cat{font-size:clamp(8px,.7vw,10px);letter-spacing:.6px;text-transform:uppercase}.slot-del{position:absolute;top:-7px;right:-7px;width:22px;height:22px;border-radius:50%;border:2px solid #fff;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 3px 8px rgba(0,0,0,.28);z-index:5}.slot-del:hover{transform:scale(1.08)}.drag-over-slot{outline:3px dashed var(--gold)!important;outline-offset:3px}.sticker-card{width:90%;height:100%;background:#fff;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 24px rgba(0,0,0,.22),0 0 0 1px rgba(21,59,115,.08);user-select:none;position:relative;transition:transform .15s ease,box-shadow .15s ease;cursor:pointer}.sticker-card:hover{transform:translateY(-4px) scale(1.015);box-shadow:0 18px 34px rgba(0,0,0,.28),0 0 0 1px rgba(21,59,115,.1)!important}.sticker-card.is-dragging{opacity:.55;transform:scale(.98)}.st-top{background:linear-gradient(135deg,var(--red),#a00d25);padding:5px 8px;display:grid;grid-template-columns:repeat(3,1fr);align-items:center;gap:4px;flex-shrink:0}.st-pos,.st-jersey{color:inherit;font:inherit}.st-photo{flex:1;background:var(--photo-bg);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;padding:4px}.st-name{background:linear-gradient(135deg,#153b73,#0e274b);padding:5px 6px 6px;display:flex;align-items:center;justify-content:center;min-height:22px}.st-name span{color:white;font-size:clamp(5.4px,.5vw,7px);font-weight:800;text-align:center;letter-spacing:.4px;text-transform:uppercase;line-height:1.15}.st-info{display:none}.edit-icon{position:absolute;top:6px;right:6px;background:rgba(7,25,50,.64);border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;backdrop-filter:blur(2px)}.logo-img{object-fit:contain;flex-shrink:0;display:block}.nav{display:flex;align-items:center;gap:14px;margin-top:18px;justify-content:center;flex-wrap:wrap}.btn-nav{width:44px;height:44px;border-radius:50%;border:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .15s,background .15s}.btn-nav:not(:disabled):hover{transform:scale(1.1)}.btn-nav:disabled{opacity:.32;cursor:default}.nav-label{text-align:center;color:rgba(255,255,255,.72);min-width:150px}.nav-label b{color:var(--gold);font-size:14px}.nav-label div{font-size:11px;opacity:.65}.counter{text-align:center;color:rgba(255,255,255,.42);font-size:12px;margin-top:10px}.modal-overlay{animation:fadeIn .2s ease forwards;position:fixed;inset:0;background:rgba(0,8,20,.82);display:flex;align-items:center;justify-content:center;z-index:200;padding:16px}.modal-box{animation:slideUp .3s cubic-bezier(.22,1,.36,1) forwards;background:#fff;border-radius:14px;overflow:hidden}.scrollable-modal{max-height:90vh;overflow-y:auto}.form-input{width:100%;padding:9px 10px;border-radius:7px;border:1.5px solid rgba(21,59,115,.34);font-size:13px;font-family:Arial, Helvetica, sans-serif;outline:none;background:#fff;color:#071932}.form-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,59,115,.1)}.label-sm{display:block;font-size:11px;font-weight:900;color:#071932;margin-bottom:5px;text-transform:uppercase;letter-spacing:.55px}.save-btn{width:100%;margin-top:18px;padding:12px;background:var(--red);color:#fff;border:none;border-radius:9px;font-size:14px;font-weight:bold;cursor:pointer;letter-spacing:1px}.save-btn:hover{background:#a00c24}.delete-btn{padding:10px 14px;background:#fff;color:var(--red);border:2px solid var(--red);border-radius:9px;cursor:pointer;font-weight:bold;font-size:13px}.delete-btn:hover{background:var(--red);color:#fff}.edit-action-btn{flex:1;padding:10px;background:var(--blue);color:#fff;border:none;border-radius:9px;cursor:pointer;font-weight:bold;font-size:13px;display:flex;align-items:center;justify-content:center;gap:6px}.confirm-box{background:#fff;border-radius:14px;padding:28px;width:310px;text-align:center}@keyframes pasteIn{0%{transform:scale(.1) rotate(15deg) translateY(-30px);opacity:0;filter:blur(6px)}55%{transform:scale(1.07) rotate(-4deg) translateY(0);opacity:1;filter:blur(0)}72%{transform:scale(.96) rotate(2deg)}86%{transform:scale(1.03) rotate(-1deg)}100%{transform:scale(1) rotate(0deg);opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes slideUp{from{transform:translateY(28px) scale(.97);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}.sticker-new{animation:pasteIn .7s cubic-bezier(.22,1.6,.36,1) forwards}
+
+.status-icon{position:absolute;right:4px;bottom:4px;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:bold;box-shadow:0 3px 9px rgba(0,0,0,.35);z-index:6}.status-sold{background:var(--red)}.status-loan{background:#f59e0b}.season-badge{background:linear-gradient(135deg,var(--red),#8d0920);color:#fff;border:2px solid var(--gold);border-radius:999px;padding:8px 13px;font-size:13px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase;box-shadow:0 4px 12px rgba(0,0,0,.18);white-space:nowrap}.profile-big{width:min(1600px,96vw);max-height:96vh;overflow-y:auto}.profile-grid{display:grid;grid-template-columns:minmax(460px,620px) 1fr;align-items:start}.profile-left{padding:32px;background:linear-gradient(155deg,#f7f0e4,#eadcc8);min-height:720px}.profile-photo-frame{width:100%;max-width:560px;min-height:700px;background:var(--photo-bg);border:10px solid #fff;border-radius:18px;box-shadow:0 18px 45px rgba(0,0,0,.28),0 0 0 3px rgba(21,59,115,.14);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}.profile-photo-frame img{width:100%;height:100%;min-height:700px;object-fit:contain;object-position:center;background:var(--photo-bg)}.profile-side{padding:34px;background:#fafbfc}.profile-section{border:1px solid #e6e0d5;border-radius:16px;padding:20px;background:#fff;margin-top:20px}.profile-section-title{font-size:15px;font-weight:900;color:var(--blue);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:14px}.check-row{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:bold;color:var(--blue);cursor:pointer}.check-row input{width:18px;height:18px}.profile-field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.profile-note{min-height:86px;resize:vertical}.inline-save{margin-top:12px;width:auto;padding:10px 16px;border-radius:999px}.profile-photo-frame .status-icon{right:15px;bottom:15px;width:32px;height:32px;font-size:20px}.leave-fields.is-hidden{display:none}@media (max-width:980px){.profile-grid{grid-template-columns:1fr}.profile-left{min-height:auto}.profile-photo-frame{max-width:520px;min-height:620px;margin:0 auto}.profile-photo-frame img{min-height:620px}.profile-field-grid{grid-template-columns:1fr}.season-badge{font-size:11px;padding:7px 10px}}@media (max-width:760px){.profile-photo-frame{min-height:480px}.profile-photo-frame img{min-height:480px}.profile-side{padding:22px}.profile-left{padding:20px}}
+@media (max-width:980px){.app-shell{width:calc(100vw - 24px);max-width:none}:root{--slot-w:clamp(78px,18vw,116px)}.album{flex-direction:column}.album-spine-left,.album-gutter{display:none}.page{min-height:auto}.page-left,.page-right{box-shadow:none}.page+.page{border-top:10px solid #6b5a3e}.topbar{align-items:flex-start}.sticker-grid{grid-template-columns:repeat(auto-fill,minmax(var(--slot-w),var(--slot-w)))}}@media (max-width:560px){body{padding:8px 6px}.app-shell{width:calc(100vw - 12px)}:root{--slot-w:clamp(74px,29vw,106px)}.brand-title{letter-spacing:1px}.global-add{width:48px;height:48px}.page{padding:12px}.category-head{align-items:flex-start;flex-direction:column}.cat-actions{align-self:flex-end}.page-head{align-items:flex-start;flex-direction:column}.spread-tools{align-self:flex-end}}
+
+/* Sticker-Parkplatz */
+.parking-closed{position:fixed;left:clamp(12px,1.4vw,22px);bottom:clamp(12px,1.4vw,22px);z-index:120;width:96px;height:72px;border:none;border-radius:10px;background:linear-gradient(135deg,#765f3b,#3b2b18);box-shadow:0 12px 34px rgba(0,0,0,.45),0 0 0 2px rgba(215,169,59,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;transform:rotate(-4deg);transition:transform .18s ease}
+.parking-closed:hover{transform:rotate(0deg) scale(1.06)}
+.parking-closed:before{content:"";position:absolute;left:12px;right:12px;top:12px;bottom:12px;border-radius:7px;background:linear-gradient(155deg,#fbf7ef,#eee5d6);box-shadow:inset -4px 0 10px rgba(0,0,0,.18)}
+.parking-closed span{position:relative;z-index:1;color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;text-align:center;line-height:1.1}
+.parking-panel{position:fixed;left:clamp(12px,1.4vw,22px);bottom:clamp(12px,1.4vw,22px);z-index:130;width:min(620px,calc(100vw - 28px));max-height:min(78vh,760px);background:#6b5a3e;border-radius:14px;overflow:hidden;box-shadow:0 22px 65px rgba(0,0,0,.58),0 0 0 2px rgba(215,169,59,.35)}
+.parking-page{background:linear-gradient(155deg,#fbf7ef,#eee5d6);margin:12px;border-radius:10px;padding:16px;max-height:calc(min(78vh,760px) - 24px);overflow:auto;position:relative}
+.parking-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;padding-bottom:10px;border-bottom:2px solid rgba(21,59,115,.12)}
+.parking-title{display:flex;align-items:center;gap:10px;color:var(--blue);font-weight:900;letter-spacing:1px;text-transform:uppercase}
+.parking-actions{display:flex;gap:8px;align-items:center}.parking-actions button{border:none;border-radius:999px;cursor:pointer;font-weight:bold}.parking-add{background:var(--blue);color:var(--gold);padding:8px 12px}.parking-close{width:34px;height:34px;background:rgba(21,59,115,.1);color:var(--blue)}
+.parking-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,96px));gap:11px;align-items:start}.parking-slot{width:96px;height:132px;position:relative}.parking-slot .sticker-card{font-size:inherit}.parking-empty{border:2px dashed rgba(21,59,115,.32);border-radius:6px;background:rgba(21,59,115,.045);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:rgba(21,59,115,.42);cursor:pointer}.parking-empty:hover{border-color:rgba(215,169,59,.82);background:rgba(215,169,59,.11)}
+@media (max-width:560px){.parking-grid{grid-template-columns:repeat(auto-fill,minmax(82px,82px))}.parking-slot{width:82px;height:112px}.parking-closed{width:82px;height:62px}.parking-panel{max-height:70vh}.parking-page{max-height:calc(70vh - 24px)}}
+
+
+/* Extra features: closed reserve album, coach sticker, league ladder */
+.parking-closed{width:118px!important;height:154px!important;border-radius:8px!important;background:linear-gradient(155deg,#fbf7ef,#eee5d6)!important;box-shadow:0 16px 38px rgba(0,0,0,.48),0 0 0 7px #6b5a3e,0 0 0 9px rgba(215,169,59,.32)!important;overflow:hidden!important;transform:rotate(-4deg)!important}
+.parking-closed:before{content:""!important;position:absolute!important;inset:8px!important;border-radius:5px!important;background:linear-gradient(135deg,rgba(21,59,115,.15),rgba(200,16,46,.08)),linear-gradient(155deg,#fbf7ef,#eee5d6)!important;box-shadow:inset -7px 0 14px rgba(0,0,0,.16)!important}
+.parking-closed:after{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;background:linear-gradient(to right,#3b2b18,#745f3d)}
+.parking-cover-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:var(--blue);text-align:center;width:100%;height:100%;padding-left:8px}
+.parking-cover-title{font-size:10px;font-weight:900;letter-spacing:.9px;text-transform:uppercase;line-height:1.08}.parking-cover-sub{font-size:8px;color:rgba(21,59,115,.65);letter-spacing:.7px;text-transform:uppercase}
+.top-actions{display:flex;align-items:center;gap:14px}.coach-sticker-mini{width:120px;height:166px;background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;box-shadow:2px 8px 24px rgba(0,0,0,.4);cursor:pointer;border:3px solid #007878;transition:transform .15s}.coach-sticker-mini:hover{transform:translateY(-4px) rotate(.6deg)}.coach-photo{flex:1;background:var(--photo-bg);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.coach-photo img{width:100%;height:100%;object-fit:contain;object-position:center}.coach-label{background:var(--red);color:#fff;text-align:center;font-weight:900;letter-spacing:.8px;font-size:10px;text-transform:uppercase;padding:5px 4px;line-height:1.15}.coach-tag{background:#f0f0f0;color:#444;font-family:Arial,sans-serif;font-size:8px;font-weight:bold;text-align:center;padding:3px}.coach-profile{width:min(920px,96vw);max-height:92vh;overflow:auto}.coach-profile-grid{display:grid;grid-template-columns:280px 1fr;gap:24px;padding:26px;background:#fafbfc}.coach-frame{height:420px;background:var(--photo-bg);border:8px solid #fff;box-shadow:0 10px 28px rgba(0,0,0,.22);border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden}.coach-frame img{width:100%;height:100%;object-fit:contain;object-position:center}.league-panel{position:absolute;right:clamp(10px,1.2vw,20px);top:clamp(96px,7vw,124px);z-index:4;width:min(230px,24vw);background:rgba(255,255,255,.88);border:2px solid rgba(21,59,115,.18);border-radius:12px;padding:10px;box-shadow:0 8px 22px rgba(0,0,0,.12);backdrop-filter:blur(3px)}.league-title{font-size:10px;color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}.league-row{border:1px solid rgba(21,59,115,.14);border-radius:8px;padding:7px 8px;margin:5px 0;font-size:11px;font-weight:900;color:rgba(21,59,115,.32);background:rgba(21,59,115,.04);cursor:pointer;transition:all .12s}.league-row:hover{color:var(--blue);background:rgba(215,169,59,.12)}.league-row.active{background:linear-gradient(135deg,var(--gold),#f4d97a);color:var(--blue);border-color:rgba(21,59,115,.3);box-shadow:0 3px 8px rgba(215,169,59,.32)}.league-row.locked{cursor:default}.league-gap{display:flex;align-items:center;gap:6px;margin:2px 0}.league-gap:before,.league-gap:after{content:"";height:1px;flex:1;background:rgba(21,59,115,.12)}.league-year{width:62px;text-align:center;border:1px dashed rgba(21,59,115,.35);border-radius:999px;background:rgba(255,255,255,.7);color:var(--blue);font-size:10px;padding:3px 5px;font-family:Arial, Helvetica, sans-serif;outline:none}.league-year:focus{border-style:solid;border-color:var(--gold);box-shadow:0 0 0 3px rgba(215,169,59,.18)}@media (max-width:1100px){.top-actions{gap:9px}.coach-sticker-mini{width:94px;height:130px}.league-panel{position:relative;right:auto;top:auto;width:100%;margin:10px 0 14px;order:-1}.coach-profile-grid{grid-template-columns:1fr}.coach-frame{height:360px}}
+
+
+
+/* Final layout adjustments: coach beside album, fixed league tiles, copied seasons */
+.app-shell{position:relative}
+.top-actions{position:absolute!important;left:calc(100% + 18px)!important;top:calc(clamp(64px,5.6vw,88px) + 18px)!important;z-index:20;display:flex!important;flex-direction:column!important;align-items:center!important;gap:12px!important}
+.top-actions .global-add{order:2;width:50px;height:50px;font-size:26px}.top-actions .coach-sticker-mini{order:1}
+.league-panel{position:fixed!important;right:clamp(14px,2vw,28px)!important;bottom:clamp(14px,2vw,28px)!important;top:auto!important;width:min(330px,26vw)!important;z-index:90!important;background:transparent!important;border:none!important;border-radius:0!important;padding:0!important;box-shadow:none!important;backdrop-filter:none!important}
+.league-title{display:none!important}.league-row{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;border:1px solid rgba(255,255,255,.18)!important;border-radius:10px!important;padding:8px 9px!important;margin:7px 0!important;font-size:11px!important;color:rgba(255,255,255,.42)!important;background:rgba(255,255,255,.06)!important;box-shadow:0 4px 14px rgba(0,0,0,.12)!important}.league-row.active{background:rgba(215,169,59,.92)!important;color:var(--blue)!important;border-color:rgba(255,255,255,.38)!important}.league-row:hover{color:#fff!important;background:rgba(255,255,255,.12)!important}.league-row.active:hover{color:var(--blue)!important;background:rgba(215,169,59,.96)!important}.league-name{flex:1;min-width:0}.league-place{width:72px;border:1px dashed currentColor;border-radius:999px;background:rgba(255,255,255,.58);color:inherit;font-size:10px;font-family:Arial, Helvetica, sans-serif;padding:4px 6px;text-align:center;outline:none}.league-place:focus{border-style:solid;background:#fff;color:var(--blue)}.league-gap{margin:5px 0}.league-year{background:rgba(255,255,255,.16)!important;color:#fff!important;border-color:rgba(255,255,255,.36)!important}.league-year:focus{background:#fff!important;color:var(--blue)!important}
+@media(max-width:1280px){.top-actions{position:static!important;flex-direction:row!important}.league-panel{position:static!important;width:100%!important;margin:14px 0!important}.app-shell{width:min(92vw,1800px)!important}}
+
+/* Groessere Sticker-Beschriftungen und Profilansicht */
+.st-top{padding:5px 7px!important;min-height:34px!important}
+.st-pos{font-size:clamp(10.5px,.86vw,15px)!important;padding:2px 7px!important;border-radius:4px!important;letter-spacing:.22px!important}
+.st-name{padding:7px 6px!important;min-height:36px!important}
+.st-name span{font-size:clamp(11.25px,1.01vw,15.75px)!important;line-height:1.08!important;letter-spacing:.42px!important}
+.st-info{font-size:clamp(9px,.85vw,13px)!important;padding:5px 7px!important}
+.edit-icon{width:24px!important;height:24px!important}.edit-icon i{font-size:13px!important}
+.status-icon{width:32px!important;height:32px!important;font-size:21px!important}
+.profile-big{width:min(1350px,96vw)!important}
+.profile-side{padding:33px!important}
+.profile-section{padding:21px!important;margin-top:21px!important;border-radius:15px!important}
+.profile-section-title{font-size:16px!important;margin-bottom:14px!important}
+.profile-field-grid{gap:17px!important}
+.profile-note{min-height:90px!important}
+.profile-photo-frame{max-width:510px!important;min-height:615px!important}
+.profile-photo-frame img{min-height:615px!important}
+.profile-left{min-height:645px!important}
+@media (max-width:980px){.profile-photo-frame{min-height:480px!important}.profile-photo-frame img{min-height:480px!important}.profile-left{min-height:auto!important}}
+@media (max-width:760px){.profile-photo-frame{min-height:375px!important}.profile-photo-frame img{min-height:375px!important}.profile-side{padding:18px!important}}
+
+.st-nick{display:none}
+
+.st-top-item{color:#fff;font-size:clamp(6px,.55vw,8.5px);font-weight:800;letter-spacing:.35px;text-align:center;text-transform:uppercase;white-space:nowrap}.st-meta-box{position:absolute;right:6px;bottom:34px;background:rgba(255,255,255,.88);border:1px solid rgba(21,59,115,.1);border-radius:8px;padding:4px 6px;display:flex;flex-direction:column;gap:2px;box-shadow:0 4px 12px rgba(0,0,0,.12);backdrop-filter:blur(2px)}.st-meta-line{display:flex;flex-direction:column;align-items:flex-end;line-height:1}.st-meta-line span{font-size:clamp(3.2px,.28vw,4.2px);text-transform:uppercase;letter-spacing:.25px;color:#768295}.st-meta-line strong{font-size:clamp(4.2px,.35vw,5.3px);font-weight:800;color:#22324d}.sticker-no-badge{position:absolute;top:6px;left:6px;background:rgba(7,25,50,.82);color:#fff;font-size:clamp(7.2px,.66vw,10px);font-weight:900;padding:2px 6px;border-radius:999px;font-family:monospace;letter-spacing:.3px;box-shadow:0 2px 8px rgba(0,0,0,.24)}
+
+/* Modernisierte Sticker – finale Overrides */
+.slot-teal{background:transparent!important;padding:0!important;border-radius:12px!important}.sticker-card{width:90%!important;height:100%!important;border-radius:14px!important;box-shadow:0 10px 24px rgba(0,0,0,.22),0 0 0 1px rgba(21,59,115,.08)!important}.sticker-card:hover{transform:translateY(-4px) scale(1.015)!important;box-shadow:0 18px 34px rgba(0,0,0,.28),0 0 0 1px rgba(21,59,115,.1)!important}.st-top{background:linear-gradient(135deg,var(--red),#a00d25)!important;padding:5px 8px!important;min-height:auto!important;display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:4px!important}.st-top-item{color:#fff!important;font-size:clamp(8.2px,.72vw,10.8px)!important;font-weight:800!important;letter-spacing:.35px!important;text-align:center!important;text-transform:uppercase!important;white-space:nowrap!important}.st-pos,.st-jersey{color:inherit!important;font:inherit!important}.st-photo{padding:4px!important}.st-name{background:linear-gradient(135deg,#153b73,#0e274b)!important;padding:5px 6px 6px!important;min-height:24px!important}.st-name span{color:#fff!important;font-size:clamp(8.4px,.76vw,11px)!important;font-weight:800!important;line-height:1.12!important;letter-spacing:.4px!important}.st-info{display:none!important}.st-meta-box{position:absolute!important;right:6px!important;bottom:34px!important;background:rgba(255,255,255,.88)!important;border:1px solid rgba(21,59,115,.1)!important;border-radius:8px!important;padding:4px 6px!important;display:flex!important;flex-direction:column!important;gap:2px!important;box-shadow:0 4px 12px rgba(0,0,0,.12)!important;backdrop-filter:blur(2px)!important}.st-meta-line{display:flex!important;flex-direction:column!important;align-items:flex-end!important;line-height:1!important}.st-meta-line span{font-size:clamp(4px,.34vw,5px)!important;text-transform:uppercase!important;letter-spacing:.25px!important;color:#768295!important}.st-meta-line strong{font-size:clamp(5px,.42vw,6.2px)!important;font-weight:800!important;color:#22324d!important}.sticker-no-badge{position:absolute!important;top:6px!important;left:6px!important;background:rgba(7,25,50,.82)!important;color:#fff!important;font-size:clamp(7.2px,.66vw,10px)!important;font-weight:900!important;padding:2px 6px!important;border-radius:999px!important;font-family:monospace!important;letter-spacing:.3px!important;box-shadow:0 2px 8px rgba(0,0,0,.24)!important}.edit-icon{position:absolute!important;top:6px!important;right:6px!important;width:20px!important;height:20px!important;background:rgba(7,25,50,.64)!important}.status-icon{right:6px!important;bottom:6px!important;width:24px!important;height:24px!important;font-size:15px!important}
+
+
+/* Sticker-Feinschliff: breiter, flacher, blaue Kopfzeile, größere Seit/Größe-Angaben */
+.slot-teal{align-items:center!important;justify-content:center!important}
+.sticker-card{width:99%!important;height:90%!important}
+.st-top{background:linear-gradient(135deg,#153b73,#0e274b)!important}
+.st-top-item{font-size:clamp(8.6px,.78vw,11.4px)!important}
+.st-meta-box{right:8px!important;bottom:38px!important;padding:6px 8px!important;border-radius:9px!important}
+.st-meta-line span{font-size:clamp(8px,.68vw,10px)!important}
+.st-meta-line strong{font-size:clamp(10px,.84vw,12.4px)!important}
+.status-icon{bottom:8px!important;right:8px!important}
+
+
+/* Sticker-Farbanpassung nach Vereinslogo */
+:root{--crest-gold:#f2d21a;--crest-blue:#153b73}
+.sticker-card{height:95%!important}
+.st-top{background:linear-gradient(135deg,var(--crest-gold),#e5c30b)!important}
+.st-name{background:linear-gradient(135deg,var(--crest-gold),#e5c30b)!important}
+.st-top-item{color:var(--crest-blue)!important;font-size:clamp(8.8px,.8vw,11.8px)!important}
+.st-name span{color:var(--crest-blue)!important}
+.sticker-no-badge{background:rgba(242,210,26,.96)!important;color:var(--crest-blue)!important;box-shadow:0 2px 8px rgba(0,0,0,.18)!important}
+.st-meta-box{right:8px!important;bottom:32px!important;padding:6px 8px!important;border-radius:10px!important;background:rgba(255,255,255,.84)!important}
+.st-meta-line.single{align-items:flex-end!important}
+.st-meta-line.single span{font-size:clamp(7.4px,.63vw,9.4px)!important;color:#64748b!important}
+.st-meta-line.single strong{font-size:clamp(10.5px,.88vw,13px)!important;color:var(--crest-blue)!important}
+
+
+/* Anpassung: Alter + Im Verein seit als Balken direkt ueber dem Namen, Flaggen fuer Nation und Seriennummer */
+.sticker-card{overflow:hidden!important}
+.st-photo{flex:1 1 auto!important}
+.st-meta-box{display:none!important}
+.st-bottom-bars{display:grid!important;grid-template-columns:1fr 1fr!important;width:100%!important;min-height:12px!important;height:calc(var(--st-name-h, 24px) / 2)!important;flex-shrink:0!important;background:linear-gradient(135deg,var(--crest-gold),#e5c30b)!important;border-top:1px solid rgba(21,59,115,.14)!important}
+.st-bottom-bar{display:flex!important;align-items:center!important;justify-content:center!important;gap:3px!important;min-width:0!important;padding:2px 3px!important;color:var(--crest-blue)!important;font-size:clamp(5.9px,.53vw,7.8px)!important;font-weight:900!important;line-height:1!important;text-transform:uppercase!important;letter-spacing:.16px!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.st-bottom-bar + .st-bottom-bar{border-left:1px solid rgba(21,59,115,.22)!important}
+.st-bottom-bar .bar-value{font-size:clamp(7.2px,.64vw,9.5px)!important;font-weight:900!important;letter-spacing:.08px!important}
+.st-name{--st-name-h:24px!important;min-height:var(--st-name-h)!important;flex-shrink:0!important}
+.st-top-flag,.st-no-flag{font-size:1.15em!important;line-height:1!important;filter:drop-shadow(0 1px 1px rgba(0,0,0,.12))}
+.st-top-item.nat-item{display:flex!important;align-items:center!important;justify-content:center!important;gap:3px!important;min-width:0!important}
+.sticker-no-badge{display:flex!important;align-items:center!important;gap:3px!important;line-height:1!important}
+
+
+
+/* Finale Anpassung: keine Flaggen, groessere blaue Sticker, Positionskasten, Trainer wie Sticker */
+:root{--sticker-blue-1:#16325b;--sticker-blue-2:#071932;--sticker-blue-3:#041022;--slot-w:clamp(108px,8.14vw,171px)!important}
+.sticker-card,.trainer-sticker-card{background:radial-gradient(circle at top,var(--sticker-blue-1) 0,var(--sticker-blue-2) 52%,var(--sticker-blue-3) 100%)!important;color:#fff!important;border:1px solid rgba(255,255,255,.14)!important;box-shadow:0 12px 28px rgba(0,0,0,.32),0 0 0 1px rgba(255,255,255,.06)!important}
+.sticker-card{width:100%!important;height:100%!important}
+.sticker-card:hover{box-shadow:0 20px 38px rgba(0,0,0,.36),0 0 0 1px rgba(255,255,255,.1)!important}
+.st-top,.st-name,.st-bottom-bars{background:transparent!important;color:#fff!important}
+.st-top{border-bottom:1px solid rgba(255,255,255,.12)!important}
+.st-name{border-top:1px solid rgba(255,255,255,.12)!important}
+.st-top-item,.st-name span,.st-bottom-bar,.st-bottom-bar .bar-value{color:#fff!important}
+.st-bottom-bars{border-top:1px solid rgba(255,255,255,.12)!important}
+.st-bottom-bar + .st-bottom-bar{border-left:1px solid rgba(255,255,255,.16)!important}
+.st-pos-box{display:inline-flex!important;align-items:center!important;justify-content:center!important;justify-self:center!important;align-self:center!important;min-width:28px!important;padding:3px 6px!important;border-radius:5px!important;color:#fff!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25),0 2px 6px rgba(0,0,0,.16)!important}
+.pos-keeper{background:#8b95a1!important}.pos-defender{background:#55c7c6!important}.pos-midfield{background:#2563eb!important}.pos-forward{background:#ec4899!important}.pos-coach{background:#6b7280!important}
+.sticker-no-badge{background:rgba(7,25,50,.82)!important;color:#fff!important;border:1px solid rgba(255,255,255,.2)!important;display:inline-flex!important;align-items:center!important;gap:0!important}
+.st-top-flag,.st-no-flag{display:none!important}.nat-item{gap:0!important}
+.st-photo{background:rgba(4,16,34,.72)!important}.st-photo img,.coach-photo img{background:rgba(4,16,34,.72)!important}
+.coach-sticker-mini.trainer-sticker-card{width:132px!important;height:183px!important;border-radius:14px!important;overflow:hidden!important;display:flex!important;flex-direction:column!important;cursor:pointer!important;padding:0!important;transform:none!important}
+.coach-sticker-mini.trainer-sticker-card:hover{transform:translateY(-4px) scale(1.015)!important}
+.coach-sticker-mini.trainer-sticker-card .st-top{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:4px!important;padding:5px 8px!important;min-height:auto!important;flex-shrink:0!important}
+.coach-sticker-mini.trainer-sticker-card .st-photo{flex:1 1 auto!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;padding:4px!important}
+.coach-sticker-mini.trainer-sticker-card .st-bottom-bars{display:grid!important;grid-template-columns:1fr 1fr!important;width:100%!important;min-height:12px!important;height:12px!important;flex-shrink:0!important}
+.coach-sticker-mini.trainer-sticker-card .st-name{min-height:24px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:5px 6px 6px!important;flex-shrink:0!important}
+.coach-sticker-mini.trainer-sticker-card .st-name span{font-size:clamp(8.4px,.76vw,11px)!important;font-weight:800!important;text-transform:uppercase!important;line-height:1.12!important;text-align:center!important}
+@media (max-width:980px){:root{--slot-w:clamp(86px,19.8vw,128px)!important}.coach-sticker-mini.trainer-sticker-card{width:104px!important;height:143px!important}}
+@media (max-width:560px){:root{--slot-w:clamp(81px,31.9vw,117px)!important}.coach-sticker-mini.trainer-sticker-card{width:98px!important;height:136px!important}}
+
+
+
+/* Anpassung: Bildhintergrund aus Muster + Rubrikfarben links */
+:root{--photo-bg:#421421!important}
+.st-photo,
+.coach-photo,
+.coach-sticker-mini.trainer-sticker-card .st-photo{background:#421421!important}
+.st-photo img,
+.coach-photo img,
+.coach-sticker-mini.trainer-sticker-card .st-photo img{background:#421421!important}
+.st-photo > div:not(.sticker-no-badge):not(.edit-icon):not(.status-icon),
+.coach-photo > div{background:#421421!important}
+#photo-area,
+#coach-photo-area{background:#421421!important}
+#photo-area img,
+#coach-photo-area img{background:#421421!important}
+
+.category[data-cat="keeper"] .category-head{border-left-color:#8b95a1!important}
+.category[data-cat="defenders"] .category-head{border-left-color:#55c7c6!important}
+.category[data-cat="midfield"] .category-head{border-left-color:#2563eb!important}
+.category[data-cat="forwards"] .category-head{border-left-color:#ec4899!important}
+
+
+
+/* --- Saison-Seite-2 und Umblätteranimation --- */
+.album{transform-style:preserve-3d;perspective:1800px}.album.page-turn-next{animation:albumPageTurnNext .46s ease both}.album.page-turn-prev{animation:albumPageTurnPrev .46s ease both}@keyframes albumPageTurnNext{0%{transform:rotateY(0);filter:brightness(1)}45%{transform:rotateY(-9deg) skewY(.4deg);filter:brightness(.85);box-shadow:0 34px 90px rgba(0,0,0,.7)}100%{transform:rotateY(0);filter:brightness(1)}}@keyframes albumPageTurnPrev{0%{transform:rotateY(0);filter:brightness(1)}45%{transform:rotateY(9deg) skewY(-.4deg);filter:brightness(.85);box-shadow:0 34px 90px rgba(0,0,0,.7)}100%{transform:rotateY(0);filter:brightness(1)}}.award-card{width:99%;height:95%;background:linear-gradient(135deg,var(--navy),#041022)!important;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 24px rgba(0,0,0,.22),0 0 0 1px rgba(255,255,255,.08);cursor:pointer;position:relative}.award-top{background:rgba(255,255,255,.08);color:#fff;font-size:clamp(7.8px,.72vw,10.5px);font-weight:900;letter-spacing:.45px;text-align:center;text-transform:uppercase;padding:6px 5px;line-height:1.05;min-height:29px;display:flex;align-items:center;justify-content:center}.award-photo{flex:1;background:var(--photo-bg);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;padding:4px}.award-photo img{width:100%;height:100%;object-fit:contain;object-position:center}.award-caption{background:linear-gradient(135deg,var(--navy),#041022);color:#fff;text-align:center;font-weight:900;font-size:clamp(8.4px,.76vw,11px);letter-spacing:.35px;text-transform:uppercase;padding:6px 5px;min-height:28px;display:flex;align-items:center;justify-content:center;line-height:1.1}.award-empty-note{font-size:clamp(8px,.72vw,11px);font-weight:900;text-transform:uppercase;letter-spacing:.55px;color:rgba(21,59,115,.45);text-align:center}.award-page-intro{margin-bottom:14px;padding:12px 14px;border-radius:10px;background:rgba(21,59,115,.08);color:var(--blue);font-size:13px;font-weight:800;line-height:1.35}.season-page-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);border:1px solid rgba(215,169,59,.34);color:var(--gold);border-radius:999px;padding:6px 10px;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase}.trophy-add-card{width:99%;height:95%;border-radius:14px;border:2px dashed rgba(21,59,115,.34);background:rgba(21,59,115,.05);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;cursor:pointer;color:rgba(21,59,115,.45);text-align:center}.trophy-add-card:hover{border-color:rgba(215,169,59,.82);background:rgba(215,169,59,.12);color:var(--blue)}
+
+
+
+/* Echte Umblätter-Animation: eine einzelne Seite klappt um die Album-Mitte */
+.album{position:relative!important;transform-style:preserve-3d!important;perspective:2200px!important}
+.album.page-turn-next,.album.page-turn-prev{animation:none!important}
+.page-flip-overlay{position:fixed;z-index:190;pointer-events:none;perspective:2400px;transform-style:preserve-3d}
+.page-flip-shadow{position:absolute;inset:0;border-radius:12px;box-shadow:0 30px 85px rgba(0,0,0,.58);overflow:hidden;background:#6b5a3e}
+.page-flip-static{position:absolute;top:0;height:100%;overflow:hidden;backface-visibility:hidden}
+.page-flip-sheet{position:absolute;top:0;height:100%;transform-style:preserve-3d;will-change:transform;z-index:4}
+.page-flip-face{position:absolute;inset:0;overflow:hidden;backface-visibility:hidden;background:linear-gradient(155deg,#fbf7ef,#eee5d6)}
+.page-flip-face.back{transform:rotateY(180deg);background:linear-gradient(100deg,#d5c5ad 0%,#fbf7ef 44%,#eadcc8 100%)}
+.page-flip-face.back:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.22),rgba(255,255,255,.05) 40%,rgba(0,0,0,.08));opacity:.75}
+.page-flip-next .page-flip-sheet{transform-origin:left center;animation:realPageTurnNext .56s cubic-bezier(.18,.72,.18,1) forwards}
+.page-flip-prev .page-flip-sheet{transform-origin:right center;animation:realPageTurnPrev .56s cubic-bezier(.18,.72,.18,1) forwards}
+.page-flip-next .page-flip-sheet:after,.page-flip-prev .page-flip-sheet:after{content:"";position:absolute;inset:0;box-shadow:0 20px 45px rgba(0,0,0,.38);border-radius:0;pointer-events:none}
+@keyframes realPageTurnNext{0%{transform:rotateY(0deg);filter:brightness(1)}18%{transform:rotateY(-34deg);filter:brightness(.98)}50%{transform:rotateY(-102deg);filter:brightness(.86)}76%{transform:rotateY(-158deg);filter:brightness(.94)}100%{transform:rotateY(-180deg);filter:brightness(1)}}
+@keyframes realPageTurnPrev{0%{transform:rotateY(0deg);filter:brightness(1)}18%{transform:rotateY(34deg);filter:brightness(.98)}50%{transform:rotateY(102deg);filter:brightness(.86)}76%{transform:rotateY(158deg);filter:brightness(.94)}100%{transform:rotateY(180deg);filter:brightness(1)}}
+@media (max-width:980px){.page-flip-overlay{display:none!important}}
+
+
+/* Anpassung Auszeichnungsseite */
+.award-category-wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.1vw,16px);align-items:start}
+.award-category{margin-bottom:0!important}.award-category .sticker-grid{grid-template-columns:1fr!important}.award-category .slot{width:100%!important;max-width:var(--slot-w)}
+.award-selected .sticker-card,.award-picker-grid .is-selected .sticker-card{background:linear-gradient(135deg,var(--crest-gold),#e5c30b)!important;box-shadow:0 0 0 3px rgba(242,210,26,.98),0 12px 28px rgba(0,0,0,.34)!important}
+.award-selected .st-top,.award-selected .st-name,.award-picker-grid .is-selected .st-top,.award-picker-grid .is-selected .st-name{background:linear-gradient(135deg,var(--crest-gold),#e5c30b)!important}
+.award-selected .st-top-item,.award-selected .st-name span,.award-picker-grid .is-selected .st-top-item,.award-picker-grid .is-selected .st-name span{color:var(--crest-blue)!important}
+.award-picker-modal{width:min(980px,96vw);max-height:92vh;overflow:auto;padding:24px;background:#fff;border-radius:14px}
+.award-picker-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,118px));gap:14px;align-items:start;justify-content:center;margin-top:16px}.award-picker-item{cursor:pointer;border:0;background:transparent;padding:0;text-align:left}.award-picker-item .slot{width:118px;height:162px}.award-picker-empty{padding:20px;border:2px dashed rgba(21,59,115,.25);border-radius:12px;text-align:center;color:rgba(21,59,115,.55);font-weight:900;text-transform:uppercase;letter-spacing:.6px}.award-picker-title{color:var(--blue);font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:1px}.award-picker-sub{font-size:12px;color:#64748b;margin-top:3px}.award-picker-actions{display:flex;align-items:center;justify-content:space-between;gap:12px}.award-picker-close{background:none;border:none;font-size:22px;color:#8a8a8a;cursor:pointer}.award-picker-new{border:none;background:var(--crest-gold);color:var(--crest-blue);font-weight:900;border-radius:999px;padding:10px 14px;cursor:pointer;display:flex;align-items:center;gap:6px}
+@media(max-width:760px){.award-category-wrap{grid-template-columns:1fr}.award-picker-grid{grid-template-columns:repeat(auto-fill,minmax(96px,96px))}.award-picker-item .slot{width:96px;height:132px}}
+
+
+
+/* --- Anpassung nach Screenshot: feste Award-Kartengroesse, Trophy-Mehrfachkarten, Trainerkarte wie Sticker --- */
+.award-category .slot.slot-teal,
+.trophy-category .slot.slot-teal{width:var(--slot-w)!important;height:var(--slot-h)!important;align-items:center!important;justify-content:center!important;overflow:visible!important}
+.award-selected{width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:visible!important}
+.award-selected .sticker-card,
+.award-picker-grid .is-selected .sticker-card{width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:100%!important;max-height:100%!important;box-sizing:border-box!important;transform:none!important}
+.award-selected .sticker-card:hover{transform:translateY(-4px) scale(1.015)!important}
+.award-selected .sticker-card,
+.award-picker-grid .is-selected .sticker-card{background:linear-gradient(135deg,var(--crest-gold),#e5c30b)!important;color:var(--crest-blue)!important;border-color:rgba(21,59,115,.18)!important;box-shadow:0 12px 28px rgba(0,0,0,.32),0 0 0 2px rgba(242,210,26,.95)!important}
+.award-selected .st-top,
+.award-selected .st-name,
+.award-selected .st-bottom-bars,
+.award-picker-grid .is-selected .st-top,
+.award-picker-grid .is-selected .st-name,
+.award-picker-grid .is-selected .st-bottom-bars{background:transparent!important;border-color:rgba(21,59,115,.22)!important;color:var(--crest-blue)!important}
+.award-selected .st-top-item,
+.award-selected .st-name span,
+.award-selected .st-bottom-bar,
+.award-selected .st-bottom-bar .bar-value,
+.award-picker-grid .is-selected .st-top-item,
+.award-picker-grid .is-selected .st-name span,
+.award-picker-grid .is-selected .st-bottom-bar,
+.award-picker-grid .is-selected .st-bottom-bar .bar-value{color:var(--crest-blue)!important}
+.award-selected .st-bottom-bar + .st-bottom-bar,
+.award-picker-grid .is-selected .st-bottom-bar + .st-bottom-bar{border-left-color:rgba(21,59,115,.22)!important}
+.award-selected .sticker-no-badge,
+.award-picker-grid .is-selected .sticker-no-badge{background:rgba(21,59,115,.92)!important;color:#fff!important;border-color:rgba(255,255,255,.24)!important}
+.trophy-category .sticker-grid{grid-template-columns:repeat(auto-fill,minmax(var(--slot-w),var(--slot-w)))!important;gap:var(--gap)!important}
+.trophy-category .award-card,
+.trophy-category .trophy-add-card{width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:100%!important;max-height:100%!important;box-sizing:border-box!important}
+.coach-sticker-mini.trainer-sticker-card{width:var(--slot-w)!important;height:var(--slot-h)!important;min-width:var(--slot-w)!important;min-height:var(--slot-h)!important;border-radius:14px!important;border:1px solid rgba(255,255,255,.14)!important;box-shadow:0 12px 28px rgba(0,0,0,.32),0 0 0 1px rgba(255,255,255,.06)!important;background:radial-gradient(circle at top,var(--sticker-blue-1) 0,var(--sticker-blue-2) 52%,var(--sticker-blue-3) 100%)!important;color:#fff!important}
+.coach-sticker-mini.trainer-sticker-card .st-top-item{font-size:clamp(8.8px,.8vw,11.8px)!important;color:#fff!important}
+.coach-sticker-mini.trainer-sticker-card .st-pos-box{font-size:clamp(8.8px,.8vw,11.8px)!important}
+.coach-sticker-mini.trainer-sticker-card .st-bottom-bar,
+.coach-sticker-mini.trainer-sticker-card .st-bottom-bar .bar-value{color:#fff!important}
+.coach-sticker-mini.trainer-sticker-card .st-bottom-bars{height:calc(var(--st-name-h,24px) / 2)!important;min-height:12px!important}
+.coach-sticker-mini.trainer-sticker-card .st-photo i{font-size:clamp(30px,3vw,44px)!important}
+@media (max-width:980px){.coach-sticker-mini.trainer-sticker-card{width:var(--slot-w)!important;height:var(--slot-h)!important;min-width:var(--slot-w)!important;min-height:var(--slot-h)!important}}
+@media (max-width:560px){.coach-sticker-mini.trainer-sticker-card{width:var(--slot-w)!important;height:var(--slot-h)!important;min-width:var(--slot-w)!important;min-height:var(--slot-h)!important}}
+
+
+
+/* Nachbesserung: Auszeichnungen wechselbar + leichtere Meta-Schrift */
+.st-bottom-bar,
+.st-bottom-bar span,
+.st-bottom-bar .bar-value{
+  font-family:monospace!important;
+  font-weight:400!important;
+  letter-spacing:.02em!important;
+}
+.profile-row-label{
+  font-family:monospace!important;
+  font-weight:400!important;
+  letter-spacing:.04em!important;
+}
+.profile-row-value{
+  font-weight:400!important;
+}
+.award-remove-btn{
+  position:absolute!important;
+  top:-9px!important;
+  right:-9px!important;
+  width:24px!important;
+  height:24px!important;
+  border-radius:50%!important;
+  border:2px solid #fff!important;
+  background:var(--red)!important;
+  color:#fff!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  cursor:pointer!important;
+  box-shadow:0 4px 10px rgba(0,0,0,.32)!important;
+  z-index:30!important;
+}
+.award-remove-btn:hover{transform:scale(1.08)!important}
+.award-selected{position:relative!important}
+
+
+
+/* Nachbesserung: flüssigere Bitmap-Umblätteranimation und saubere Abstände auf Seite 2 */
+.page-flip-overlay{contain:layout paint style!important;isolation:isolate!important}
+.page-flip-static,.page-flip-sheet{overflow:hidden!important}
+.page-flip-static img,.page-flip-face img{width:100%!important;height:100%!important;object-fit:fill!important;display:block!important;user-select:none!important;-webkit-user-drag:none!important}
+.page-flip-face{background:transparent!important}
+.page-flip-face.back{background:linear-gradient(100deg,#d5c5ad 0%,#fbf7ef 44%,#eadcc8 100%)!important}
+.page-flip-next .page-flip-sheet{animation:realPageTurnNext .34s cubic-bezier(.2,.75,.16,1) forwards!important}
+.page-flip-prev .page-flip-sheet{animation:realPageTurnPrev .34s cubic-bezier(.2,.75,.16,1) forwards!important}
+.award-category-wrap{row-gap:clamp(16px,1.7vw,26px)!important;column-gap:clamp(14px,1.5vw,22px)!important;margin-bottom:clamp(16px,1.7vw,26px)!important;align-items:start!important}
+.award-category{margin-bottom:0!important;display:flex!important;flex-direction:column!important;gap:8px!important}
+.award-category .category-head,.trophy-category .category-head{margin-bottom:8px!important}
+.award-category .sticker-grid,.trophy-category .sticker-grid{margin-top:0!important;padding-top:0!important}
+.trophy-category{margin-top:clamp(16px,1.7vw,26px)!important;margin-bottom:clamp(16px,1.7vw,26px)!important}
+.award-category-wrap:empty{display:none!important;margin:0!important}
+.award-category-wrap:empty + .trophy-category{margin-top:0!important}
+
+
+
+/* --- Finale Anpassungen: fluessiger Seitenwechsel, Auszeichnungs-Abstaende, groessere Liga/Sticker-Mikrotypografie --- */
+.page-flip-overlay{position:fixed!important;z-index:999!important;pointer-events:none!important;perspective:2600px!important;transform-style:preserve-3d!important;contain:layout paint style!important;isolation:isolate!important}
+.page-flip-shadow{position:absolute!important;inset:0!important;border-radius:12px!important;box-shadow:0 30px 85px rgba(0,0,0,.58)!important;overflow:hidden!important;background:#6b5a3e!important}
+.page-flip-static{position:absolute!important;top:0!important;height:100%!important;overflow:hidden!important;backface-visibility:hidden!important;transform:translateZ(0)!important}
+.page-flip-sheet{position:absolute!important;top:0!important;height:100%!important;transform-style:preserve-3d!important;will-change:transform!important;z-index:5!important;transform:translateZ(2px)!important}
+.page-flip-face{position:absolute!important;inset:0!important;overflow:hidden!important;backface-visibility:hidden!important;-webkit-backface-visibility:hidden!important;background:linear-gradient(155deg,#fbf7ef,#eee5d6)!important}
+.page-flip-face.front{transform:rotateY(0deg)!important}
+.page-flip-face.back{transform:rotateY(180deg)!important;background:linear-gradient(100deg,#d5c5ad 0%,#fbf7ef 46%,#eadcc8 100%)!important}
+.page-flip-face.back:after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(0,0,0,.20),rgba(255,255,255,.08) 42%,rgba(0,0,0,.06))!important;opacity:.7!important}
+.page-flip-static .page,.page-flip-face .page{width:100%!important;height:100%!important;min-height:100%!important;box-shadow:none!important;border-radius:0!important}
+.page-flip-static .page-inner,.page-flip-face .page-inner{height:100%!important}
+.page-flip-next .page-flip-sheet{transform-origin:left center!important;animation:smoothBookFlipNext .38s cubic-bezier(.22,.72,.18,1) forwards!important}
+.page-flip-prev .page-flip-sheet{transform-origin:right center!important;animation:smoothBookFlipPrev .38s cubic-bezier(.22,.72,.18,1) forwards!important}
+.page-flip-next .page-flip-sheet:after,.page-flip-prev .page-flip-sheet:after{content:""!important;position:absolute!important;inset:0!important;pointer-events:none!important;box-shadow:0 18px 42px rgba(0,0,0,.36)!important;opacity:.75!important}
+@keyframes smoothBookFlipNext{0%{transform:translateZ(2px) rotateY(0deg);filter:brightness(1)}42%{transform:translateZ(2px) rotateY(-82deg);filter:brightness(.84)}100%{transform:translateZ(2px) rotateY(-180deg);filter:brightness(1)}}
+@keyframes smoothBookFlipPrev{0%{transform:translateZ(2px) rotateY(0deg);filter:brightness(1)}42%{transform:translateZ(2px) rotateY(82deg);filter:brightness(.84)}100%{transform:translateZ(2px) rotateY(180deg);filter:brightness(1)}}
+
+/* Seite 2: zweite Reihe links und Titel-Bereich rechts sauber auf gleiche Hoehe bringen */
+.page-left .award-category-wrap,.page-right .award-category-wrap{align-items:start!important;row-gap:clamp(14px,1.45vw,22px)!important;column-gap:clamp(14px,1.5vw,22px)!important}
+.page-right .award-category-wrap{margin-bottom:clamp(8px,.85vw,13px)!important}
+.page-right .trophy-category{margin-top:0!important;margin-bottom:clamp(16px,1.7vw,26px)!important}
+.award-category .category-head,.trophy-category .category-head{margin-bottom:8px!important}
+.award-category .sticker-grid,.trophy-category .sticker-grid{padding-top:0!important;margin-top:0!important}
+
+/* Liga-Leiste: groessere Schrift und hoeheres Eingabefeld */
+.league-row{font-size:12.5px!important;min-height:39px!important;padding:10px 11px!important;letter-spacing:.18px!important}
+.league-place{width:82px!important;font-size:11.5px!important;padding:6px 7px!important;min-height:27px!important}
+.league-year{width:70px!important;font-size:11.5px!important;padding:5px 7px!important;min-height:25px!important}
+.league-gap{margin:7px 0!important}
+
+/* Karten-Mikrotexte: Alter, Seit und Seriennummer leicht groesser */
+.st-bottom-bar{font-size:clamp(6.2px,.56vw,8.2px)!important;font-weight:400!important;font-family:monospace!important;letter-spacing:.12px!important}
+.st-bottom-bar .bar-value{font-size:clamp(7.6px,.68vw,10px)!important;font-weight:400!important;font-family:monospace!important;letter-spacing:.08px!important}
+.sticker-no-badge{font-size:clamp(7.6px,.70vw,10.5px)!important}
+.award-selected .st-bottom-bar,.award-selected .st-bottom-bar .bar-value{font-weight:400!important;font-family:monospace!important}
+
+
+/* Clean profile overview: remove bottom cards, season stats and career stats */
+.fm-dashboard-clean{grid-template-columns:330px minmax(680px,1fr)!important;}
+.fm-dashboard-clean .fm-mid-panel{min-width:0!important;}
+.fm-dashboard-clean .fm-right-panel,.fm-dashboard-clean .fm-bottom-cards{display:none!important;}
+@media(max-width:1450px){.fm-dashboard-clean{grid-template-columns:300px 1fr!important;}.fm-dashboard-clean .fm-attribute-board{grid-template-columns:repeat(3,1fr)!important;}.fm-dashboard-clean .fm-info-card{grid-column:1/-1!important;}}
+@media(max-width:980px){.fm-dashboard-clean{grid-template-columns:1fr!important;}}
+
+/* --- nächster ursprünglicher <style>-Block --- */
+
+.fm-attr-val.vlow{color:#8f96a6!important}.fm-attr-val.mid{color:#fff!important}.fm-attr-val.yellow{color:#ffd34d!important}.fm-attr-val.green{color:#74ff89!important}
+.fm-career-main-table tr:not(.is-total){cursor:pointer!important}.fm-radio-fake.disabled{opacity:1!important}
+
+
+/* Patch: kompakter Karriere-Tab + Foto per Zwischenablage */
+.fm-career-table-card{min-height:0!important;padding-bottom:14px!important}
+.fm-career-total-spacer{height:12px!important}
+.fm-season-divider{margin:12px 0 10px!important}
+.fm-season-title{margin:10px 0 10px!important}
+#photo-area{outline:none!important}
+#photo-area:focus{box-shadow:0 0 0 3px rgba(215,169,59,.35)!important;border-color:var(--gold)!important}
+.photo-paste-hint{font-size:10px;color:#536070;margin-top:4px;line-height:1.3}
+
+/* --- nächster ursprünglicher <style>-Block --- */
+
+/* Fix: Platzhaltertext sauber zentrieren und nicht seitlich verrutschen */
+.slot-empty,
+.parking-empty,
+.trophy-add-card{
+  text-align:center!important;
+  padding:0 10px!important;
+  overflow:hidden!important;
+}
+
+.slot-empty > i,
+.parking-empty > i,
+.trophy-add-card > i{
+  display:block!important;
+  flex:0 0 auto!important;
+  width:100%!important;
+  text-align:center!important;
+  line-height:1!important;
+  margin:0 auto!important;
+}
+
+.slot-cat,
+.award-empty-note{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  text-align:center!important;
+  line-height:1.15!important;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:normal!important;
+  transform:none!important;
+  margin:0 auto!important;
+}
+
+.slot-empty[data-cid] .slot-cat:after{
+  content:' auswählen'!important;
+}
+
+
+/* Reserve-Album: Karten lesbarer und sauber skaliert */
+.parking-panel{
+  width:min(1120px,calc(100vw - 28px))!important;
+}
+
+.parking-grid{
+  grid-template-columns:repeat(auto-fill,minmax(128px,128px))!important;
+  gap:18px!important;
+  align-items:start!important;
+}
+
+.parking-slot{
+  width:128px!important;
+  height:176px!important;
+  overflow:visible!important;
+}
+
+.parking-slot .sticker-card{
+  width:100%!important;
+  height:100%!important;
+  border-radius:16px!important;
+}
+
+.parking-slot .st-top{
+  min-height:28px!important;
+  padding:5px 7px!important;
+}
+
+.parking-slot .st-top-item,
+.parking-slot .st-pos-box{
+  font-size:10px!important;
+  line-height:1!important;
+  white-space:nowrap!important;
+}
+
+.parking-slot .st-photo{
+  padding:5px!important;
+}
+
+.parking-slot .st-name{
+  min-height:34px!important;
+  padding:6px 7px!important;
+}
+
+.parking-slot .st-name span{
+  font-size:15px!important;
+  line-height:1.05!important;
+  letter-spacing:.1px!important;
+  white-space:normal!important;
+  overflow:hidden!important;
+  display:-webkit-box!important;
+  -webkit-line-clamp:2!important;
+  -webkit-box-orient:vertical!important;
+}
+
+.parking-slot .st-bottom-bars{
+  min-height:24px!important;
+  height:24px!important;
+}
+
+.parking-slot .st-bottom-bar{
+  font-size:7px!important;
+  line-height:1!important;
+  gap:3px!important;
+  padding:3px 2px!important;
+}
+
+.parking-slot .st-bottom-bar .bar-value{
+  font-size:9px!important;
+  line-height:1!important;
+}
+
+.parking-slot .sticker-no-badge{
+  font-size:10px!important;
+  padding:3px 6px!important;
+}
+
+.parking-slot .status-icon{
+  width:22px!important;
+  height:22px!important;
+  font-size:14px!important;
+}
+
+.parking-empty{
+  font-size:11px!important;
+  text-align:center!important;
+}
+
+@media(max-width:760px){
+  .parking-grid{
+    grid-template-columns:repeat(auto-fill,minmax(108px,108px))!important;
+    gap:14px!important;
+  }
+  .parking-slot{
+    width:108px!important;
+    height:148px!important;
+  }
+  .parking-slot .st-name span{
+    font-size:12.5px!important;
+  }
+}
+
+
+
+/* FINAL FIX: Reserve-Album Karten wie normale Sticker, sauber lesbar */
+.parking-panel{
+  left:50%!important;
+  bottom:clamp(12px,1.4vw,22px)!important;
+  transform:translateX(-50%)!important;
+  width:min(1480px,calc(100vw - 36px))!important;
+  max-height:min(82vh,860px)!important;
+  border-radius:16px!important;
+}
+
+.parking-page{
+  max-height:calc(min(82vh,860px) - 24px)!important;
+  padding:20px!important;
+  overflow:auto!important;
+}
+
+.parking-head{
+  position:sticky!important;
+  top:0!important;
+  z-index:20!important;
+  background:linear-gradient(155deg,#fbf7ef,#eee5d6)!important;
+  padding:0 0 14px!important;
+  margin-bottom:18px!important;
+}
+
+.parking-grid{
+  display:grid!important;
+  grid-template-columns:repeat(auto-fill,minmax(150px,150px))!important;
+  gap:24px 28px!important;
+  align-items:start!important;
+  justify-content:start!important;
+  padding:0 0 22px!important;
+}
+
+.parking-slot{
+  width:150px!important;
+  height:206px!important;
+  overflow:visible!important;
+}
+
+.parking-slot .sticker-card{
+  width:150px!important;
+  height:206px!important;
+  max-width:none!important;
+  max-height:none!important;
+  min-width:150px!important;
+  min-height:206px!important;
+  border-radius:17px!important;
+  overflow:hidden!important;
+  transform:none!important;
+}
+
+.parking-slot .sticker-card:hover{
+  transform:translateY(-4px) scale(1.015)!important;
+}
+
+.parking-slot .st-top{
+  min-height:31px!important;
+  padding:6px 8px!important;
+  grid-template-columns:1fr 1fr 1fr!important;
+}
+
+.parking-slot .st-top-item,
+.parking-slot .st-pos-box{
+  font-size:11px!important;
+  line-height:1!important;
+  letter-spacing:.15px!important;
+}
+
+.parking-slot .st-photo{
+  min-height:100px!important;
+  padding:5px!important;
+}
+
+.parking-slot .st-name{
+  min-height:43px!important;
+  padding:7px 8px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+
+.parking-slot .st-name span{
+  font-size:18px!important;
+  line-height:1.02!important;
+  letter-spacing:.05px!important;
+  text-align:center!important;
+  white-space:normal!important;
+  overflow:hidden!important;
+  display:-webkit-box!important;
+  -webkit-line-clamp:2!important;
+  -webkit-box-orient:vertical!important;
+  word-break:normal!important;
+  hyphens:none!important;
+}
+
+.parking-slot .st-bottom-bars{
+  min-height:30px!important;
+  height:30px!important;
+}
+
+.parking-slot .st-bottom-bar{
+  flex-direction:column!important;
+  gap:2px!important;
+  padding:3px 2px!important;
+  font-size:8px!important;
+  line-height:1!important;
+  letter-spacing:.03em!important;
+  overflow:hidden!important;
+}
+
+.parking-slot .st-bottom-bar .bar-value{
+  font-size:11px!important;
+  line-height:1!important;
+  font-weight:700!important;
+  max-width:100%!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+
+.parking-slot .sticker-no-badge{
+  top:7px!important;
+  left:7px!important;
+  font-size:11px!important;
+  padding:3px 7px!important;
+}
+
+.parking-slot .edit-icon,
+.parking-slot .slot-del{
+  display:none!important;
+}
+
+.parking-empty{
+  width:150px!important;
+  height:206px!important;
+  border-radius:17px!important;
+  text-align:center!important;
+}
+
+@media(max-width:900px){
+  .parking-grid{
+    grid-template-columns:repeat(auto-fill,minmax(124px,124px))!important;
+    gap:18px!important;
+  }
+  .parking-slot,
+  .parking-slot .sticker-card,
+  .parking-empty{
+    width:124px!important;
+    height:170px!important;
+    min-width:124px!important;
+    min-height:170px!important;
+  }
+  .parking-slot .st-name{
+    min-height:36px!important;
+  }
+  .parking-slot .st-name span{
+    font-size:14px!important;
+  }
+}
+
+
+
+/* RESPONSIVE Reserve-Album */
+.parking-panel{
+  width:min(1480px,calc(100vw - 28px))!important;
+  left:50%!important;
+  right:auto!important;
+  bottom:clamp(10px,1.5vw,22px)!important;
+  transform:translateX(-50%)!important;
+  max-height:min(82vh,860px)!important;
+}
+
+.parking-page{
+  max-height:calc(min(82vh,860px) - 24px)!important;
+  padding:clamp(12px,1.4vw,20px)!important;
+}
+
+.parking-grid{
+  grid-template-columns:repeat(auto-fit,minmax(clamp(106px,8.8vw,150px),1fr))!important;
+  gap:clamp(12px,1.5vw,28px)!important;
+  justify-items:center!important;
+  align-items:start!important;
+}
+
+.parking-slot,
+.parking-empty{
+  width:clamp(106px,8.8vw,150px)!important;
+  height:calc(clamp(106px,8.8vw,150px) * 1.37)!important;
+  min-width:0!important;
+  min-height:0!important;
+}
+
+.parking-slot .sticker-card{
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  max-width:none!important;
+  max-height:none!important;
+}
+
+.parking-slot .st-top{
+  min-height:clamp(24px,1.9vw,31px)!important;
+  padding:clamp(4px,.45vw,6px) clamp(5px,.55vw,8px)!important;
+}
+
+.parking-slot .st-top-item,
+.parking-slot .st-pos-box{
+  font-size:clamp(8px,.72vw,11px)!important;
+}
+
+.parking-slot .st-photo{
+  min-height:0!important;
+  padding:clamp(3px,.35vw,5px)!important;
+}
+
+.parking-slot .st-name{
+  min-height:clamp(32px,2.55vw,43px)!important;
+  padding:clamp(5px,.55vw,7px) clamp(5px,.6vw,8px)!important;
+}
+
+.parking-slot .st-name span{
+  font-size:clamp(12px,1.05vw,18px)!important;
+  line-height:1.04!important;
+}
+
+.parking-slot .st-bottom-bars{
+  min-height:clamp(22px,1.8vw,30px)!important;
+  height:clamp(22px,1.8vw,30px)!important;
+}
+
+.parking-slot .st-bottom-bar{
+  font-size:clamp(6.2px,.55vw,8px)!important;
+  padding:2px!important;
+}
+
+.parking-slot .st-bottom-bar .bar-value{
+  font-size:clamp(8px,.75vw,11px)!important;
+}
+
+.parking-slot .sticker-no-badge{
+  font-size:clamp(8px,.75vw,11px)!important;
+  padding:clamp(2px,.25vw,3px) clamp(5px,.5vw,7px)!important;
+}
+
+@media(max-width:980px){
+  .parking-panel{
+    width:calc(100vw - 20px)!important;
+    max-height:76vh!important;
+  }
+
+  .parking-page{
+    max-height:calc(76vh - 24px)!important;
+  }
+
+  .parking-head{
+    flex-wrap:wrap!important;
+    gap:10px!important;
+  }
+
+  .parking-title{
+    min-width:0!important;
+  }
+
+  .parking-grid{
+    grid-template-columns:repeat(auto-fit,minmax(112px,1fr))!important;
+    gap:16px!important;
+  }
+
+  .parking-slot,
+  .parking-empty{
+    width:112px!important;
+    height:154px!important;
+  }
+}
+
+@media(max-width:560px){
+  .parking-panel{
+    left:6px!important;
+    right:6px!important;
+    bottom:6px!important;
+    transform:none!important;
+    width:auto!important;
+    max-height:74vh!important;
+    border-radius:12px!important;
+  }
+
+  .parking-page{
+    margin:8px!important;
+    padding:10px!important;
+    max-height:calc(74vh - 16px)!important;
+    border-radius:8px!important;
+  }
+
+  .parking-head{
+    position:sticky!important;
+    top:0!important;
+    z-index:30!important;
+    padding-bottom:9px!important;
+    margin-bottom:12px!important;
+  }
+
+  .parking-title{
+    gap:7px!important;
+    font-size:13px!important;
+  }
+
+  .parking-actions{
+    width:100%!important;
+    justify-content:space-between!important;
+  }
+
+  .parking-add{
+    flex:1!important;
+    padding:8px 10px!important;
+  }
+
+  .parking-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+  }
+
+  .parking-slot,
+  .parking-empty{
+    width:min(42vw,132px)!important;
+    height:calc(min(42vw,132px) * 1.37)!important;
+  }
+
+  .parking-slot .st-name span{
+    font-size:clamp(12px,4.1vw,15px)!important;
+  }
+
+  .parking-slot .st-top-item,
+  .parking-slot .st-pos-box{
+    font-size:clamp(7.5px,2.6vw,9.5px)!important;
+  }
+}
+
+@media(max-width:360px){
+  .parking-grid{
+    grid-template-columns:1fr 1fr!important;
+    gap:10px!important;
+  }
+
+  .parking-slot,
+  .parking-empty{
+    width:40vw!important;
+    height:54.8vw!important;
+  }
+}
+
+
+
+/* FINAL RESPONSIVE LAYOUT FIX: Reserve-Album bleibt komplett im Viewport */
+html, body{
+  overflow-x:hidden!important;
+}
+
+.parking-panel{
+  position:fixed!important;
+  left:clamp(8px,1.2vw,20px)!important;
+  right:clamp(8px,1.2vw,20px)!important;
+  bottom:clamp(8px,1.2vw,20px)!important;
+  top:auto!important;
+  width:auto!important;
+  max-width:none!important;
+  transform:none!important;
+  max-height:min(78vh,820px)!important;
+  z-index:180!important;
+}
+
+.parking-page{
+  width:100%!important;
+  max-width:100%!important;
+  max-height:calc(min(78vh,820px) - 24px)!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  margin:12px!important;
+  padding:clamp(12px,1.3vw,20px)!important;
+}
+
+.parking-head{
+  width:100%!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+}
+
+.parking-grid{
+  width:100%!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+  display:grid!important;
+  grid-template-columns:repeat(auto-fill,minmax(118px,1fr))!important;
+  gap:clamp(12px,1.2vw,22px)!important;
+  justify-items:center!important;
+  align-items:start!important;
+  overflow:hidden!important;
+}
+
+.parking-slot,
+.parking-empty{
+  width:min(100%,132px)!important;
+  height:calc(min(100%,132px) * 1.37)!important;
+  aspect-ratio:1 / 1.37!important;
+}
+
+.parking-slot .sticker-card{
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  max-width:100%!important;
+  max-height:100%!important;
+}
+
+.parking-slot .st-name span{
+  font-size:clamp(12px,.92vw,16px)!important;
+  line-height:1.04!important;
+}
+
+/* Laptop / schmalere Desktops */
+@media(max-width:1280px){
+  .parking-panel{
+    left:10px!important;
+    right:10px!important;
+    max-height:76vh!important;
+  }
+  .parking-page{
+    max-height:calc(76vh - 24px)!important;
+  }
+  .parking-grid{
+    grid-template-columns:repeat(auto-fill,minmax(108px,1fr))!important;
+    gap:14px!important;
+  }
+  .parking-slot,
+  .parking-empty{
+    width:min(100%,118px)!important;
+  }
+}
+
+/* Tablet */
+@media(max-width:900px){
+  .parking-panel{
+    left:8px!important;
+    right:8px!important;
+    bottom:8px!important;
+    max-height:74vh!important;
+  }
+  .parking-page{
+    margin:8px!important;
+    max-height:calc(74vh - 16px)!important;
+  }
+  .parking-grid{
+    grid-template-columns:repeat(auto-fill,minmax(96px,1fr))!important;
+    gap:12px!important;
+  }
+  .parking-slot,
+  .parking-empty{
+    width:min(100%,108px)!important;
+  }
+}
+
+/* Handy */
+@media(max-width:560px){
+  .parking-panel{
+    left:6px!important;
+    right:6px!important;
+    bottom:6px!important;
+    max-height:72vh!important;
+    border-radius:12px!important;
+  }
+  .parking-page{
+    margin:7px!important;
+    padding:10px!important;
+    max-height:calc(72vh - 14px)!important;
+  }
+  .parking-head{
+    flex-direction:column!important;
+    align-items:stretch!important;
+  }
+  .parking-actions{
+    width:100%!important;
+  }
+  .parking-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:10px!important;
+  }
+  .parking-slot,
+  .parking-empty{
+    width:min(42vw,126px)!important;
+  }
+  .parking-slot .st-name span{
+    font-size:clamp(11px,3.8vw,14px)!important;
+  }
+}
+
+
+
+/* RESERVE-ALBUM FINAL: einzelne Karten, korrektes Seitenverhaeltnis, nicht gefaechert */
+.parking-panel{
+  position:fixed!important;
+  left:clamp(10px,1.2vw,22px)!important;
+  right:clamp(10px,1.2vw,22px)!important;
+  bottom:clamp(10px,1.2vw,22px)!important;
+  width:auto!important;
+  transform:none!important;
+  max-height:min(82vh,860px)!important;
+  overflow:hidden!important;
+}
+
+.parking-page{
+  margin:12px!important;
+  padding:18px!important;
+  max-height:calc(min(82vh,860px) - 24px)!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+}
+
+.parking-grid{
+  display:grid!important;
+  grid-template-columns:repeat(auto-fill, minmax(132px, 132px))!important;
+  gap:22px 24px!important;
+  justify-content:start!important;
+  justify-items:start!important;
+  align-items:start!important;
+  width:100%!important;
+  max-width:100%!important;
+  overflow:visible!important;
+}
+
+.parking-slot,
+.parking-empty{
+  width:132px!important;
+  height:181px!important;
+  min-width:132px!important;
+  min-height:181px!important;
+  max-width:132px!important;
+  max-height:181px!important;
+  aspect-ratio:132 / 181!important;
+  overflow:visible!important;
+  display:block!important;
+}
+
+.parking-slot .sticker-card{
+  width:132px!important;
+  height:181px!important;
+  min-width:132px!important;
+  min-height:181px!important;
+  max-width:132px!important;
+  max-height:181px!important;
+  aspect-ratio:132 / 181!important;
+  border-radius:15px!important;
+  overflow:hidden!important;
+  display:flex!important;
+  flex-direction:column!important;
+  transform:none!important;
+}
+
+.parking-slot .sticker-card:hover{
+  transform:translateY(-3px) scale(1.012)!important;
+}
+
+.parking-slot .st-top{
+  min-height:27px!important;
+  height:27px!important;
+  padding:5px 7px!important;
+  flex-shrink:0!important;
+}
+
+.parking-slot .st-photo{
+  flex:1 1 auto!important;
+  min-height:0!important;
+  padding:4px!important;
+}
+
+.parking-slot .st-bottom-bars{
+  height:25px!important;
+  min-height:25px!important;
+  flex-shrink:0!important;
+}
+
+.parking-slot .st-name{
+  min-height:36px!important;
+  height:36px!important;
+  padding:5px 7px!important;
+  flex-shrink:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+
+.parking-slot .st-name span{
+  font-size:15px!important;
+  line-height:1.05!important;
+  text-align:center!important;
+  white-space:normal!important;
+  overflow:hidden!important;
+  display:-webkit-box!important;
+  -webkit-line-clamp:2!important;
+  -webkit-box-orient:vertical!important;
+}
+
+.parking-slot .st-top-item,
+.parking-slot .st-pos-box{
+  font-size:9.5px!important;
+  line-height:1!important;
+}
+
+.parking-slot .st-bottom-bar{
+  flex-direction:column!important;
+  gap:1px!important;
+  padding:2px!important;
+  font-size:7px!important;
+  line-height:1!important;
+}
+
+.parking-slot .st-bottom-bar .bar-value{
+  font-size:9px!important;
+  line-height:1!important;
+  font-weight:700!important;
+}
+
+.parking-slot .sticker-no-badge{
+  font-size:9px!important;
+  padding:2px 6px!important;
+}
+
+.parking-slot .edit-icon,
+.parking-slot .slot-del{
+  display:none!important;
+}
+
+@media(max-width:1280px){
+  .parking-grid{
+    grid-template-columns:repeat(auto-fill, minmax(118px, 118px))!important;
+    gap:18px!important;
+  }
+  .parking-slot,
+  .parking-empty,
+  .parking-slot .sticker-card{
+    width:118px!important;
+    height:162px!important;
+    min-width:118px!important;
+    min-height:162px!important;
+    max-width:118px!important;
+    max-height:162px!important;
+  }
+  .parking-slot .st-name{
+    height:34px!important;
+    min-height:34px!important;
+  }
+  .parking-slot .st-name span{
+    font-size:13.5px!important;
+  }
+}
+
+@media(max-width:760px){
+  .parking-grid{
+    grid-template-columns:repeat(auto-fill, minmax(108px, 108px))!important;
+    justify-content:center!important;
+    gap:14px!important;
+  }
+  .parking-slot,
+  .parking-empty,
+  .parking-slot .sticker-card{
+    width:108px!important;
+    height:148px!important;
+    min-width:108px!important;
+    min-height:148px!important;
+    max-width:108px!important;
+    max-height:148px!important;
+  }
+  .parking-slot .st-name span{
+    font-size:12px!important;
+  }
+}
+
+@media(max-width:420px){
+  .parking-grid{
+    grid-template-columns:repeat(2, 108px)!important;
+    justify-content:center!important;
+  }
+}
+
+/* --- nächster ursprünglicher <style>-Block --- */
+
+/* Verhindert, dass beim Laden kurz die alte Trainerkarte sichtbar ist.
+     Sichtbar ist nur noch die finale Screenshot-Trainerkarte. */
+  #coach-card:not(.trainer-screenshot-card),
+  .top-actions #coach-card:not(.trainer-screenshot-card){
+    display:none!important;
+    visibility:hidden!important;
+    opacity:0!important;
+    pointer-events:none!important;
+  }
+
+/* --- nächster ursprünglicher <style>-Block --- */
+
+/* Reserve Screen: keine aufgefächerten Sticker, feste Einzelkarten mit Album-Abstand */
+.parking-panel{
+  overflow:hidden!important;
+}
+
+.parking-page{
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+}
+
+.parking-grid,
+.parking-grid.reserve-archive-grid{
+  --reserve-card-w:clamp(108px, 8.4vw, 142px);
+  --reserve-card-h:calc(var(--reserve-card-w) * 1.37);
+  display:grid!important;
+  grid-template-columns:repeat(auto-fill, var(--reserve-card-w))!important;
+  grid-auto-flow:row!important;
+  gap:clamp(14px, 1.25vw, 22px)!important;
+  justify-content:start!important;
+  justify-items:center!important;
+  align-items:start!important;
+  align-content:start!important;
+  width:100%!important;
+  max-width:100%!important;
+  padding:2px 2px clamp(16px,1.4vw,24px)!important;
+  overflow:visible!important;
+}
+
+.parking-slot,
+.parking-empty,
+.parking-grid.reserve-archive-grid > .parking-slot,
+.parking-grid.reserve-archive-grid > .parking-empty{
+  width:var(--reserve-card-w)!important;
+  height:var(--reserve-card-h)!important;
+  min-width:var(--reserve-card-w)!important;
+  min-height:var(--reserve-card-h)!important;
+  max-width:var(--reserve-card-w)!important;
+  max-height:var(--reserve-card-h)!important;
+  aspect-ratio:1 / 1.37!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  position:relative!important;
+  overflow:visible!important;
+  margin:0!important;
+  padding:0!important;
+  transform:none!important;
+  rotate:0deg!important;
+}
+
+.parking-slot .sticker-card,
+.parking-grid.reserve-archive-grid .sticker-card{
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  position:relative!important;
+  inset:auto!important;
+  margin:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  transform:none!important;
+  rotate:0deg!important;
+  translate:0 0!important;
+  transform-origin:center center!important;
+}
+
+.parking-slot .sticker-card:hover,
+.parking-grid.reserve-archive-grid .sticker-card:hover{
+  transform:translateY(-3px) scale(1.012)!important;
+  rotate:0deg!important;
+}
+
+.parking-slot .sticker-card:nth-child(n),
+.parking-grid.reserve-archive-grid .sticker-card:nth-child(n){
+  transform:none!important;
+  rotate:0deg!important;
+  margin:0!important;
+}
+
+.parking-slot .sticker-card:nth-child(n):hover,
+.parking-grid.reserve-archive-grid .sticker-card:nth-child(n):hover{
+  transform:translateY(-3px) scale(1.012)!important;
+}
+
+/* Innenaufbau im Reserve-Album bleibt wie ein eingeklebter Sticker und stapelt nicht. */
+.parking-slot .st-top{
+  flex-shrink:0!important;
+}
+
+.parking-slot .st-photo{
+  flex:1 1 auto!important;
+  min-height:0!important;
+}
+
+.parking-slot .st-bottom-bars,
+.parking-slot .st-name{
+  flex-shrink:0!important;
+}
+
+/* Kleinere Screens: zwei saubere Spalten mit Abstand statt Fächer/Überlappung. */
+@media(max-width:560px){
+  .parking-grid,
+  .parking-grid.reserve-archive-grid{
+    --reserve-card-w:min(42vw, 126px);
+    grid-template-columns:repeat(2, var(--reserve-card-w))!important;
+    justify-content:center!important;
+    gap:12px!important;
+  }
+}
+
+@media(max-width:360px){
+  .parking-grid,
+  .parking-grid.reserve-archive-grid{
+    --reserve-card-w:40vw;
+    gap:10px!important;
+  }
+}
+
+/* --- nächster ursprünglicher <style>-Block --- */
+
+/* FINAL FIX: Spielerprofil responsiv, keine ueberlappenden Flaechen */
+.modal-overlay:has(.fm-profile-modal){
+  align-items:flex-start!important;
+  justify-content:center!important;
+  padding:clamp(6px,1.2vw,18px)!important;
+  overflow:auto!important;
+  overscroll-behavior:contain!important;
+}
+
+.fm-profile-modal{
+  width:min(1720px,calc(100vw - clamp(12px,2.4vw,36px)))!important;
+  max-width:100%!important;
+  max-height:calc(100dvh - clamp(12px,2.4vw,36px))!important;
+  overflow:auto!important;
+  transform:none!important;
+  box-sizing:border-box!important;
+}
+
+.fm-profile-header,
+.fm-tab-content,
+.fm-profile-actions,
+.fm-card{
+  box-sizing:border-box!important;
+}
+
+/* Header bricht sauber um, statt fixe Spalten ineinander zu schieben. */
+.fm-profile-top{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:stretch!important;
+  gap:clamp(10px,1vw,18px)!important;
+  min-width:0!important;
+}
+
+.fm-profile-top > *{
+  min-width:0!important;
+}
+
+.fm-profile-top > div:nth-child(2){
+  flex:1 1 300px!important;
+  min-width:min(300px,100%)!important;
+}
+
+.fm-headshot{
+  flex:0 0 92px!important;
+  width:92px!important;
+  height:110px!important;
+  position:static!important;
+}
+
+.fm-header-block{
+  flex:1 1 180px!important;
+  min-width:170px!important;
+  max-width:none!important;
+}
+
+.fm-close{
+  flex:0 0 44px!important;
+  margin-left:auto!important;
+  align-self:flex-start!important;
+}
+
+.fm-name{
+  font-size:clamp(24px,2.2vw,36px)!important;
+  line-height:1.04!important;
+  overflow-wrap:anywhere!important;
+}
+
+.fm-mini-tags{
+  max-width:100%!important;
+}
+
+.fm-tag{
+  max-width:100%!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+
+/* Inhalt: erst links Profil/Position, rechts Attribute; dann automatisch stapeln. */
+.fm-dashboard-clean,
+.fm-dashboard.fm-dashboard-roles{
+  display:grid!important;
+  grid-template-columns:minmax(260px,330px) minmax(0,1fr)!important;
+  gap:clamp(12px,1vw,16px)!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  align-items:start!important;
+}
+
+.fm-left-panel,
+.fm-mid-panel,
+.fm-right-panel{
+  min-width:0!important;
+  max-width:100%!important;
+}
+
+.fm-card{
+  min-width:0!important;
+  max-width:100%!important;
+  overflow:hidden!important;
+}
+
+.fm-card:has(.fm-table){
+  overflow-x:auto!important;
+}
+
+.fm-attribute-board,
+.fm-dashboard-clean .fm-attribute-board,
+.fm-dashboard-roles .fm-attribute-board{
+  display:grid!important;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr))!important;
+  gap:clamp(10px,.9vw,14px)!important;
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  align-items:start!important;
+}
+
+.fm-info-card{
+  grid-column:auto!important;
+}
+
+.fm-info-row{
+  grid-template-columns:minmax(92px,130px) minmax(0,1fr)!important;
+  min-width:0!important;
+}
+
+.fm-info-value,
+.fm-info-label,
+.fm-header-value,
+.fm-small,
+.fm-attr-row span:first-child{
+  min-width:0!important;
+  overflow-wrap:anywhere!important;
+}
+
+.fm-attr-row{
+  grid-template-columns:minmax(0,1fr) 34px!important;
+  min-width:0!important;
+}
+
+.fm-attr-card{
+  align-self:start!important;
+}
+
+.fm-role-pitch,
+.fm-pitch{
+  width:100%!important;
+  max-width:302px!important;
+}
+
+.fm-table{
+  min-width:560px!important;
+}
+
+@media(max-width:1500px){
+  .fm-profile-modal{
+    width:calc(100vw - 24px)!important;
+  }
+  .fm-profile-header{
+    padding:16px 18px 0!important;
+  }
+  .fm-tab-content{
+    padding:14px 16px 18px!important;
+  }
+  .fm-dashboard-clean,
+  .fm-dashboard.fm-dashboard-roles{
+    grid-template-columns:minmax(240px,300px) minmax(0,1fr)!important;
+  }
+  .fm-attribute-board,
+  .fm-dashboard-clean .fm-attribute-board,
+  .fm-dashboard-roles .fm-attribute-board{
+    grid-template-columns:repeat(auto-fit,minmax(215px,1fr))!important;
+  }
+}
+
+@media(max-width:1180px){
+  .fm-dashboard-clean,
+  .fm-dashboard.fm-dashboard-roles{
+    grid-template-columns:1fr!important;
+  }
+  .fm-left-panel{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+  }
+  .fm-attribute-board,
+  .fm-dashboard-clean .fm-attribute-board,
+  .fm-dashboard-roles .fm-attribute-board{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
+@media(max-width:760px){
+  .modal-overlay:has(.fm-profile-modal){
+    padding:0!important;
+    align-items:stretch!important;
+  }
+  .fm-profile-modal{
+    width:100vw!important;
+    max-width:100vw!important;
+    max-height:100dvh!important;
+    border-radius:0!important;
+  }
+  .fm-profile-header{
+    border-radius:0!important;
+    padding:12px 12px 0!important;
+  }
+  .fm-profile-top{
+    display:grid!important;
+    grid-template-columns:64px minmax(0,1fr) 42px!important;
+    gap:10px!important;
+    align-items:start!important;
+  }
+  .fm-headshot{
+    width:64px!important;
+    height:80px!important;
+    flex-basis:64px!important;
+  }
+  .fm-profile-top > div:nth-child(2){
+    min-width:0!important;
+    flex-basis:auto!important;
+  }
+  .fm-name{
+    font-size:clamp(21px,7vw,28px)!important;
+  }
+  .fm-number{
+    font-size:15px!important;
+    padding:3px 7px!important;
+  }
+  .fm-mini-tags{
+    gap:5px!important;
+    margin-top:8px!important;
+  }
+  .fm-tag{
+    font-size:11px!important;
+    padding:4px 6px!important;
+  }
+  .fm-header-block{
+    grid-column:1/-1!important;
+    display:grid!important;
+    grid-template-columns:110px minmax(0,1fr)!important;
+    gap:4px 10px!important;
+    min-width:0!important;
+    padding:9px 0 0!important;
+    border-left:0!important;
+    border-top:1px solid rgba(255,255,255,.12)!important;
+  }
+  .fm-header-block .fm-small{
+    grid-column:2!important;
+  }
+  .fm-header-label{
+    font-size:10px!important;
+  }
+  .fm-header-value{
+    font-size:13px!important;
+  }
+  .fm-stars{
+    font-size:15px!important;
+  }
+  .fm-close{
+    width:42px!important;
+    height:42px!important;
+    margin-left:0!important;
+    justify-self:end!important;
+  }
+  .fm-tabs{
+    justify-content:flex-start!important;
+    overflow-x:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+    gap:6px!important;
+    margin-top:12px!important;
+    padding-bottom:1px!important;
+  }
+  .fm-tabs label{
+    flex:0 0 auto!important;
+    padding:10px 12px!important;
+    white-space:nowrap!important;
+  }
+  .fm-tab-content{
+    padding:12px!important;
+  }
+  .fm-left-panel,
+  .fm-attribute-board,
+  .fm-dashboard-clean .fm-attribute-board,
+  .fm-dashboard-roles .fm-attribute-board{
+    grid-template-columns:1fr!important;
+  }
+  .fm-info-row{
+    grid-template-columns:minmax(88px,38%) minmax(0,1fr)!important;
+    gap:8px!important;
+  }
+  .fm-profile-actions{
+    position:sticky!important;
+    bottom:0!important;
+    z-index:5!important;
+    padding:10px 12px!important;
+    flex-direction:column!important;
+    border-radius:0!important;
+  }
+  .fm-table{
+    min-width:520px!important;
+  }
+}
+
+@media(max-width:420px){
+  .fm-profile-top{
+    grid-template-columns:56px minmax(0,1fr) 38px!important;
+    gap:8px!important;
+  }
+  .fm-headshot{
+    width:56px!important;
+    height:72px!important;
+    flex-basis:56px!important;
+  }
+  .fm-close{
+    width:38px!important;
+    height:38px!important;
+  }
+  .fm-header-block{
+    grid-template-columns:1fr!important;
+  }
+  .fm-header-block .fm-small{
+    grid-column:1!important;
+  }
+  .fm-info-row{
+    grid-template-columns:1fr!important;
+    gap:3px!important;
+  }
+  .fm-card{
+    padding:12px!important;
+  }
+}
+
+/* --- nächster ursprünglicher <style>-Block --- */
+
+/* Die Trainerkarte nutzt dieselben Bausteine, Proportionen und Typografie wie eine normale Spielerkarte. */
+  .top-actions .coach-sticker-mini.trainer-sticker-card,
+  #coach-card.trainer-sticker-card{
+    width:var(--slot-w)!important;
+    height:var(--slot-h)!important;
+    min-width:var(--slot-w)!important;
+    min-height:var(--slot-h)!important;
+    max-width:var(--slot-w)!important;
+    max-height:var(--slot-h)!important;
+    border-radius:14px!important;
+    overflow:hidden!important;
+    display:flex!important;
+    flex-direction:column!important;
+    padding:0!important;
+    background:radial-gradient(circle at top,var(--sticker-blue-1) 0,var(--sticker-blue-2) 52%,var(--sticker-blue-3) 100%)!important;
+    color:#fff!important;
+    border:1px solid rgba(255,255,255,.14)!important;
+    box-shadow:0 12px 28px rgba(0,0,0,.32),0 0 0 1px rgba(255,255,255,.06)!important;
+    cursor:pointer!important;
+    transform:none!important;
+  }
+  #coach-card.trainer-sticker-card:hover{
+    transform:translateY(-4px) scale(1.015)!important;
+    box-shadow:0 20px 38px rgba(0,0,0,.36),0 0 0 1px rgba(255,255,255,.1)!important;
+  }
+  #coach-card.trainer-sticker-card .st-top{
+    display:grid!important;
+    grid-template-columns:repeat(3,1fr)!important;
+    gap:4px!important;
+    padding:5px 8px!important;
+    min-height:auto!important;
+    flex-shrink:0!important;
+    background:transparent!important;
+    border-bottom:1px solid rgba(255,255,255,.12)!important;
+  }
+  #coach-card.trainer-sticker-card .st-top-item,
+  #coach-card.trainer-sticker-card .st-pos-box{
+    color:#fff!important;
+    font-size:clamp(8.8px,.8vw,11.8px)!important;
+    font-weight:800!important;
+    letter-spacing:.35px!important;
+    text-align:center!important;
+    text-transform:uppercase!important;
+    white-space:nowrap!important;
+    line-height:1!important;
+  }
+  #coach-card.trainer-sticker-card .st-photo{
+    flex:1 1 auto!important;
+    min-height:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    overflow:hidden!important;
+    position:relative!important;
+    padding:4px!important;
+    background:#421421!important;
+  }
+  #coach-card.trainer-sticker-card .st-photo img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    background:#421421!important;
+  }
+  #coach-card.trainer-sticker-card .sticker-no-badge{
+    position:absolute!important;
+    top:6px!important;
+    left:6px!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:0!important;
+    background:rgba(7,25,50,.82)!important;
+    color:#fff!important;
+    border:1px solid rgba(255,255,255,.2)!important;
+    font-family:monospace!important;
+    font-size:clamp(7.6px,.70vw,10.5px)!important;
+    font-weight:900!important;
+    line-height:1!important;
+    letter-spacing:.3px!important;
+    padding:2px 6px!important;
+    border-radius:999px!important;
+    box-shadow:0 2px 8px rgba(0,0,0,.24)!important;
+    z-index:6!important;
+  }
+  #coach-card.trainer-sticker-card .st-bottom-bars{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    width:100%!important;
+    height:calc(var(--st-name-h,24px) / 2)!important;
+    min-height:12px!important;
+    flex-shrink:0!important;
+    background:transparent!important;
+    border-top:1px solid rgba(255,255,255,.12)!important;
+  }
+  #coach-card.trainer-sticker-card .st-bottom-bar{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:3px!important;
+    min-width:0!important;
+    padding:2px 3px!important;
+    color:#fff!important;
+    font-family:monospace!important;
+    font-size:clamp(6.2px,.56vw,8.2px)!important;
+    font-weight:400!important;
+    line-height:1!important;
+    text-transform:uppercase!important;
+    letter-spacing:.12px!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+  }
+  #coach-card.trainer-sticker-card .st-bottom-bar + .st-bottom-bar{border-left:1px solid rgba(255,255,255,.16)!important;}
+  #coach-card.trainer-sticker-card .st-bottom-bar .bar-value{
+    color:#fff!important;
+    font-family:monospace!important;
+    font-size:clamp(7.6px,.68vw,10px)!important;
+    font-weight:400!important;
+    letter-spacing:.08px!important;
+  }
+  #coach-card.trainer-sticker-card .st-name{
+    --st-name-h:24px!important;
+    min-height:var(--st-name-h)!important;
+    flex-shrink:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding:5px 6px 6px!important;
+    background:transparent!important;
+    border-top:1px solid rgba(255,255,255,.12)!important;
+  }
+  #coach-card.trainer-sticker-card .st-name span{
+    color:#fff!important;
+    font-size:clamp(8.4px,.76vw,11px)!important;
+    font-weight:800!important;
+    text-transform:uppercase!important;
+    line-height:1.12!important;
+    letter-spacing:.4px!important;
+    text-align:center!important;
+  }
+  @media(max-width:1280px){
+    .top-actions{position:static!important;flex-direction:row!important;align-items:center!important;gap:10px!important;}
+    #coach-card.trainer-sticker-card{width:var(--slot-w)!important;height:var(--slot-h)!important;min-width:var(--slot-w)!important;min-height:var(--slot-h)!important;}
+  }
+
+/* --- nächster ursprünglicher <style>-Block --- */
+
+.coach-sticker-mini.trainer-sticker-card{
+    width:var(--slot-w)!important;
+    height:var(--slot-h)!important;
+    min-width:var(--slot-w)!important;
+    min-height:var(--slot-h)!important;
+    max-width:var(--slot-w)!important;
+    max-height:var(--slot-h)!important;
+    border-radius:14px!important;
+    overflow:hidden!important;
+    display:flex!important;
+    flex-direction:column!important;
+    padding:0!important;
+    background:radial-gradient(circle at top,var(--sticker-blue-1) 0,var(--sticker-blue-2) 52%,var(--sticker-blue-3) 100%)!important;
+    border:1px solid rgba(255,255,255,.14)!important;
+    box-shadow:0 12px 28px rgba(0,0,0,.32),0 0 0 1px rgba(255,255,255,.06)!important;
+    color:#fff!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .st-top{
+    display:grid!important;
+    grid-template-columns:repeat(3,1fr)!important;
+    align-items:center!important;
+    gap:4px!important;
+    min-height:auto!important;
+    padding:5px 8px!important;
+    flex-shrink:0!important;
+    background:transparent!important;
+    border-bottom:1px solid rgba(255,255,255,.12)!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .st-top-item{
+    color:#fff!important;
+    font-size:clamp(8.8px,.8vw,11.8px)!important;
+    font-weight:800!important;
+    letter-spacing:.35px!important;
+    text-align:center!important;
+    text-transform:uppercase!important;
+    white-space:nowrap!important;
+    line-height:1!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .st-pos-box,
+  .coach-sticker-mini.trainer-sticker-card .pos-coach{
+    background:rgba(255,255,255,.16)!important;
+    color:#fff!important;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.25),0 2px 6px rgba(0,0,0,.16)!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .st-photo{
+    flex:1 1 auto!important;
+    min-height:0!important;
+    position:relative!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    overflow:hidden!important;
+    padding:4px!important;
+    background:#421421!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .st-photo img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    background:#421421!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .sticker-no-badge{
+    position:absolute!important;
+    top:6px!important;
+    left:6px!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    gap:0!important;
+    background:rgba(7,25,50,.82)!important;
+    color:#fff!important;
+    border:1px solid rgba(255,255,255,.2)!important;
+    font-size:clamp(7.6px,.70vw,10.5px)!important;
+    font-weight:900!important;
+    padding:2px 6px!important;
+    border-radius:999px!important;
+    font-family:monospace!important;
+    letter-spacing:.3px!important;
+    line-height:1!important;
+    box-shadow:0 2px 8px rgba(0,0,0,.24)!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .st-bottom-bars{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    width:100%!important;
+    min-height:12px!important;
+    height:calc(var(--st-name-h,24px) / 2)!important;
+    flex-shrink:0!important;
+    background:linear-gradient(135deg,rgba(22,50,91,.98),rgba(4,16,34,.98))!important;
+    border-top:1px solid rgba(255,255,255,.12)!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .st-bottom-bar{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:3px!important;
+    min-width:0!important;
+    padding:2px 3px!important;
+    color:#fff!important;
+    font-family:monospace!important;
+    font-size:clamp(6.2px,.56vw,8.2px)!important;
+    font-weight:400!important;
+    line-height:1!important;
+    text-transform:uppercase!important;
+    letter-spacing:.12px!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .st-bottom-bar + .st-bottom-bar{
+    border-left:1px solid rgba(255,255,255,.16)!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .st-bottom-bar .bar-value{
+    color:#fff!important;
+    font-family:monospace!important;
+    font-size:clamp(7.6px,.68vw,10px)!important;
+    font-weight:400!important;
+    letter-spacing:.08px!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .st-name{
+    --st-name-h:24px!important;
+    min-height:var(--st-name-h)!important;
+    flex-shrink:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding:5px 6px 6px!important;
+    background:linear-gradient(135deg,rgba(22,50,91,.98),rgba(4,16,34,.98))!important;
+    border-top:1px solid rgba(255,255,255,.12)!important;
+  }
+
+  .coach-sticker-mini.trainer-sticker-card .st-name span{
+    color:#fff!important;
+    font-size:clamp(8.4px,.76vw,11px)!important;
+    font-weight:800!important;
+    text-transform:uppercase!important;
+    line-height:1.12!important;
+    text-align:center!important;
+    letter-spacing:.4px!important;
+  }
+
+  .coach-label,
+  .coach-tag{
+    display:none!important;
+  }
+
+/* --- nächster ursprünglicher <style>-Block --- */
+
+/* Container rechts neben dem Album: gleiche Groesse wie eine Spielerkarte, aber keine eigenen Coach-Farben mehr. */
+  .top-actions #coach-card.sticker-card.sticker-card-refmatch,
+  #coach-card.sticker-card.sticker-card-refmatch{
+    width:var(--slot-w)!important;
+    height:var(--slot-h)!important;
+    min-width:var(--slot-w)!important;
+    min-height:var(--slot-h)!important;
+    max-width:var(--slot-w)!important;
+    max-height:var(--slot-h)!important;
+    border-radius:18px!important;
+    overflow:hidden!important;
+    position:relative!important;
+    padding:0!important;
+    margin:0!important;
+    display:block!important;
+    color:#fff!important;
+    cursor:pointer!important;
+    transform:none!important;
+
+    /* 1:1 wie .sticker-card.sticker-card-refmatch */
+    background:linear-gradient(180deg,#46101d 0%,#511421 47%,#5b1726 100%)!important;
+    border:1px solid rgba(255,255,255,.13)!important;
+    box-shadow:0 13px 28px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.08)!important;
+    isolation:isolate!important;
+  }
+
+  .top-actions #coach-card.sticker-card.sticker-card-refmatch:hover,
+  #coach-card.sticker-card.sticker-card-refmatch:hover{
+    transform:translateY(-4px) scale(1.015)!important;
+    box-shadow:0 18px 34px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.08)!important;
+  }
+
+  /* Gleiche Hintergrund-/Muster-Ebenen wie Spielerkarte. */
+  #coach-card.sticker-card.sticker-card-refmatch::before{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    background:
+      radial-gradient(circle at 50% 20%, rgba(255,255,255,.08) 0%, rgba(255,255,255,0) 30%),
+      linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0) 18%),
+      repeating-linear-gradient(60deg, rgba(255,255,255,.045) 0 1px, transparent 1px 24px),
+      repeating-linear-gradient(-60deg, rgba(255,255,255,.045) 0 1px, transparent 1px 24px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 1px, transparent 1px 21px)!important;
+    opacity:.84!important;
+    z-index:0!important;
+    pointer-events:none!important;
+  }
+
+  #coach-card.sticker-card.sticker-card-refmatch::after{
+    content:""!important;
+    position:absolute!important;
+    left:0!important;
+    right:0!important;
+    bottom:0!important;
+    height:70%!important;
+    background:linear-gradient(0deg,
+      rgba(139,38,55,.88) 0%,
+      rgba(124,32,50,.72) 26%,
+      rgba(104,25,43,.46) 52%,
+      rgba(88,20,36,.20) 74%,
+      rgba(88,20,36,0) 100%)!important;
+    z-index:1!important;
+    pointer-events:none!important;
+  }
+
+  /* Trainer bekommt die roten Spieler-Bausteine, nicht die alten .st-top/.st-photo/.st-name Coach-Regeln. */
+  #coach-card .st-top,
+  #coach-card .st-photo,
+  #coach-card .st-bottom-bars,
+  #coach-card .st-name,
+  #coach-card .coach-label,
+  #coach-card .coach-tag{
+    display:none!important;
+  }
+
+  #coach-card.sticker-card.sticker-card-refmatch > *{position:relative!important;z-index:1!important;}
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-top{z-index:4!important;color:#fff!important;}
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-portrait{z-index:2!important;bottom:54px!important;}
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-lower{z-index:3!important;height:38%!important;padding:0 10px 12px!important;justify-content:flex-end!important;}
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-lower::before,
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-lower::after{content:none!important;display:none!important;background:none!important;clip-path:none!important;}
+
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-cardno,
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-jersey,
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-name span,
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-meta-label,
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-meta-value,
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-meta-value.nat{
+    color:#fff!important;
+    text-shadow:0 1px 2px rgba(0,0,0,.32)!important;
+  }
+  #coach-card.sticker-card.sticker-card-refmatch .st-red-meta-label{color:rgba(255,255,255,.74)!important;}
+  #coach-card.sticker-card.sticker-card-refmatch .edit-icon,
+  #coach-card.sticker-card.sticker-card-refmatch .status-icon,
+  #coach-card.sticker-card.sticker-card-refmatch .sold-card-note{display:none!important;}
+
+/* --- nächster ursprünglicher <style>-Block --- */
+
+.top-actions #coach-card.trainer-screenshot-card,
+  #coach-card.trainer-screenshot-card{
+    width:var(--slot-w)!important;
+    height:calc(var(--slot-w) * 1.37)!important;
+    min-width:var(--slot-w)!important;
+    min-height:calc(var(--slot-w) * 1.37)!important;
+    max-width:var(--slot-w)!important;
+    max-height:calc(var(--slot-w) * 1.37)!important;
+    position:relative!important;
+    overflow:hidden!important;
+    display:block!important;
+    padding:0!important;
+    margin:0!important;
+    border-radius:18px!important;
+    cursor:pointer!important;
+    color:#fff!important;
+    background:
+      radial-gradient(circle at 50% 24%, rgba(255,255,255,.075) 0 26%, transparent 42%),
+      linear-gradient(180deg,#4b1120 0%,#551524 45%,#681d31 70%,#c34663 100%)!important;
+    border:1px solid rgba(255,255,255,.18)!important;
+    box-shadow:0 13px 28px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.08)!important;
+    transform:none!important;
+    isolation:isolate!important;
+  }
+  .top-actions #coach-card.trainer-screenshot-card:hover,
+  #coach-card.trainer-screenshot-card:hover{
+    transform:translateY(-4px) scale(1.015)!important;
+    box-shadow:0 18px 34px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.08)!important;
+  }
+  #coach-card.trainer-screenshot-card:before{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:0!important;
+    background:
+      repeating-linear-gradient(60deg, rgba(255,255,255,.052) 0 1px, transparent 1px 24px),
+      repeating-linear-gradient(-60deg, rgba(255,255,255,.052) 0 1px, transparent 1px 24px),
+      linear-gradient(180deg, rgba(255,255,255,.04), transparent 22%)!important;
+    opacity:.7!important;
+    pointer-events:none!important;
+  }
+  #coach-card.trainer-screenshot-card:after{
+    content:""!important;
+    position:absolute!important;
+    left:0!important;right:0!important;bottom:0!important;
+    height:50%!important;
+    z-index:1!important;
+    background:linear-gradient(180deg, rgba(196,68,96,0) 0%, rgba(196,68,96,.58) 42%, rgba(200,70,100,.94) 100%)!important;
+    pointer-events:none!important;
+  }
+  #coach-card.trainer-screenshot-card *{box-sizing:border-box!important;}
+  #coach-card.trainer-screenshot-card .trainer-card-no{
+    position:absolute!important;left:8%!important;top:5%!important;z-index:5!important;
+    color:#fff!important;font-weight:900!important;font-size:clamp(15px,1.18vw,23px)!important;line-height:1!important;
+    text-shadow:0 2px 4px rgba(0,0,0,.34)!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-crest{
+    position:absolute!important;right:8.5%!important;top:5%!important;z-index:5!important;
+    width:clamp(28px,2.25vw,42px)!important;height:clamp(34px,2.7vw,50px)!important;
+    display:flex!important;align-items:center!important;justify-content:center!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-crest img{width:100%!important;height:100%!important;object-fit:contain!important;background:transparent!important;display:block!important;}
+  #coach-card.trainer-screenshot-card .trainer-card-season{
+    position:absolute!important;right:12.2%!important;top:18.6%!important;z-index:5!important;
+    font-weight:900!important;font-size:clamp(13px,1vw,19px)!important;line-height:1!important;text-shadow:0 2px 4px rgba(0,0,0,.32)!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-photo{
+    position:absolute!important;left:0!important;right:0!important;top:12%!important;bottom:23%!important;z-index:2!important;
+    display:flex!important;align-items:flex-end!important;justify-content:center!important;overflow:hidden!important;background:transparent!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-photo img{
+    width:94%!important;height:100%!important;object-fit:contain!important;object-position:center bottom!important;background:transparent!important;filter:drop-shadow(0 9px 10px rgba(0,0,0,.18))!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-silhouette{
+    width:78%!important;height:90%!important;position:relative!important;opacity:.9!important;
+    background:linear-gradient(180deg,#c9c9c9 0%,#bcb9ba 45%,#bf6076 78%,#c34663 100%)!important;
+    clip-path:polygon(40% 0,60% 0,70% 4%,77% 14%,80% 28%,80% 43%,76% 49%,72% 63%,100% 75%,100% 100%,0 100%,0 75%,28% 63%,24% 49%,20% 43%,20% 28%,23% 14%,30% 4%)!important;
+    filter:drop-shadow(0 9px 10px rgba(0,0,0,.16))!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-name{
+    position:absolute!important;left:8%!important;right:8%!important;bottom:17.8%!important;z-index:5!important;
+    text-align:center!important;color:#fff!important;font-weight:900!important;font-size:clamp(16px,1.45vw,27px)!important;line-height:1.08!important;
+    text-shadow:0 2px 4px rgba(0,0,0,.42)!important;white-space:normal!important;overflow:hidden!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-meta{
+    position:absolute!important;left:7.5%!important;right:7.5%!important;bottom:5.5%!important;z-index:5!important;
+    display:grid!important;grid-template-columns:1fr 1fr 1fr!important;gap:4px!important;align-items:end!important;text-align:left!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-meta-label{
+    display:block!important;color:rgba(255,255,255,.72)!important;font-weight:900!important;text-transform:uppercase!important;letter-spacing:.75px!important;
+    font-size:clamp(7px,.62vw,11px)!important;line-height:1!important;margin-bottom:7px!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-meta-value{
+    display:block!important;color:#fff!important;font-weight:900!important;text-transform:uppercase!important;letter-spacing:.15px!important;font-size:clamp(9px,.84vw,15px)!important;line-height:1!important;
+    text-shadow:0 1px 3px rgba(0,0,0,.28)!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-meta > div:nth-child(2){text-align:center!important;}
+  #coach-card.trainer-screenshot-card .trainer-card-meta > div:nth-child(3){text-align:right!important;}
+  #coach-card.trainer-screenshot-card .st-top,
+  #coach-card.trainer-screenshot-card .st-photo,
+  #coach-card.trainer-screenshot-card .st-bottom-bars,
+  #coach-card.trainer-screenshot-card .st-name,
+  #coach-card.trainer-screenshot-card .edit-icon,
+  #coach-card.trainer-screenshot-card .status-icon,
+  #coach-card.trainer-screenshot-card .sticker-no-badge{display:none!important;}
+
+/* --- nächster ursprünglicher <style>-Block --- */
+
+/* Karte bleibt gleich gross, nur Inhalt/Schriften werden kleiner und luftiger */
+  #coach-card.trainer-screenshot-card .trainer-card-no{
+    left:7.6%!important;
+    top:5.3%!important;
+    font-size:clamp(9px,.64vw,13px)!important;
+    letter-spacing:.1px!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-crest{
+    right:8.6%!important;
+    top:5.1%!important;
+    width:clamp(20px,1.45vw,29px)!important;
+    height:clamp(24px,1.75vw,34px)!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-season{
+    right:12.8%!important;
+    top:16.7%!important;
+    font-size:clamp(8px,.58vw,12px)!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-photo{
+    top:12.7%!important;
+    bottom:22.8%!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-photo img{
+    width:91%!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-silhouette{
+    width:74%!important;
+    height:88%!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-name{
+    left:9%!important;
+    right:9%!important;
+    bottom:18.1%!important;
+    font-size:clamp(10px,.78vw,15px)!important;
+    line-height:1.08!important;
+    letter-spacing:-.15px!important;
+    -webkit-line-clamp:2!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-card-meta{
+    left:7.8%!important;
+    right:7.8%!important;
+    bottom:5.6%!important;
+    gap:3px!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-meta-label{
+    font-size:clamp(4.6px,.38vw,7px)!important;
+    line-height:1!important;
+    margin-bottom:4px!important;
+    letter-spacing:.48px!important;
+  }
+  #coach-card.trainer-screenshot-card .trainer-meta-value{
+    font-size:clamp(6.2px,.50vw,9.5px)!important;
+    line-height:1!important;
+    letter-spacing:.05px!important;
+  }
+
+  @media (max-width:1280px){
+    #coach-card.trainer-screenshot-card .trainer-card-name{font-size:clamp(9px,1.05vw,13px)!important;}
+    #coach-card.trainer-screenshot-card .trainer-meta-label{font-size:clamp(4.2px,.72vw,6px)!important;}
+    #coach-card.trainer-screenshot-card .trainer-meta-value{font-size:clamp(5.8px,.88vw,8px)!important;}
+    #coach-card.trainer-screenshot-card .trainer-card-no{font-size:clamp(8px,1.05vw,11px)!important;}
+    #coach-card.trainer-screenshot-card .trainer-card-season{font-size:clamp(7px,.95vw,10px)!important;}
+  }
+
+  @media (max-width:560px){
+    #coach-card.trainer-screenshot-card .trainer-card-name{font-size:clamp(8.5px,3vw,11px)!important;}
+    #coach-card.trainer-screenshot-card .trainer-meta-label{font-size:clamp(3.8px,1.45vw,5px)!important;margin-bottom:3px!important;}
+    #coach-card.trainer-screenshot-card .trainer-meta-value{font-size:clamp(5.2px,1.9vw,7px)!important;}
+  }
+
+/* --- nächster ursprünglicher <style>-Block --- */
+
+.fm-import-history-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12px}
+.fm-import-history-table th,.fm-import-history-table td{padding:7px 8px;border-bottom:1px solid rgba(255,255,255,.08);white-space:nowrap;text-align:left}
+.fm-import-history-table th{color:#9fb0c8;font-weight:800;text-transform:uppercase;font-size:10px;letter-spacing:.06em}
+.fm-import-history-table td.fm-table-right,.fm-import-history-table th.fm-table-right{text-align:right}
+.fm-import-raw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:10px}
+.fm-import-raw-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:7px}
+.fm-import-raw-label{font-size:9px;text-transform:uppercase;letter-spacing:.07em;color:#9fb0c8;margin-bottom:3px}
+.fm-import-raw-value{font-size:12px;color:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
